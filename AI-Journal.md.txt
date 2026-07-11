@@ -1,0 +1,116 @@
+# AI Journal 2026
+
+## Day 1 — July 8, 2026
+
+### What I Set Up Today
+
+Today, I installed the main tools needed for the beginning of my AI/ML learning journey.
+
+I installed the following VS Code extensions:
+
+- Python
+- Pylance
+- Jupyter
+
+I also installed Python 3.12.2 on my Windows laptop and confirmed that it was working through Command Prompt.
+
+### What I Learnt
+
+I learnt that Python is the main programming language I will use for my AI/ML journey.
+
+I also learnt that `pip` is the Python package installer. It works like an app store for Python because it allows me to install extra tools and libraries that Python needs.
+
+For example, I used this command to install Jupyter Notebook and JupyterLab:
+
+```bash
+pip install notebook jupyterlab
+```
+
+### Understanding Jupyter
+
+I learnt that Jupyter is not a programming language. It is a system that allows me to write and run Python code in notebook form.
+
+Jupyter Notebook is the classic interface for working with notebooks.
+
+JupyterLab is the more modern workspace version. It allows me to open notebooks, files, terminals, and other tools in one place.
+
+I also learnt that Jupyter notebooks are saved with the `.ipynb` file extension, which means **Interactive Python Notebook**.
+
+### Documentation Habit
+
+I learnt that it is important to document my daily progress as I learn.
+
+Instead of writing my AI journal only in Google Docs, I created a folder for my AI/ML journey and created a Markdown file inside it.
+
+My folder is called:
+
+```text
+ai-roadmap-2026
+```
+
+My journal file is called:
+
+```text
+AIjournal.md
+```
+
+I opened the folder in VS Code so I can continue documenting my learning in a more technical and professional way.
+
+### Reflection
+
+Today was mainly about setting up my learning environment and understanding the purpose of each tool.
+
+I now understand the difference between:
+
+- Python
+- pip
+- VS Code
+- Jupyter Notebook
+- JupyterLab
+
+This is the foundation for my AI/ML journey.
+
+## Day 2 - July 9, 2026
+
+### What I did Today
+
+Today, I watched a 15-minutes video on JuypterLab, specifically on Notebook. I learnt there are two
+
+cells namely Markdown and code cells. The Markdown is for writing note while the code cell is for writing and running
+
+codes. I successfully ran my first code on Jupyter notebook. The little project I worked on was creating a calculator to estimate
+
+my monthly income, which was successful. I saved this file as 
+
+```text
+day-02-tutoring-income-calculator.ipynb
+```text
+
+## Day 3 — July 10, 2026
+
+### What I Did Today
+
+Today was quite interesting. I completed 10 Python challenges and was able to run each code successfully.
+
+Here are the challenges I solved:
+
+- Exercise 1 — Weekly tutoring income
+- Exercise 2 — Monthly tutoring income
+- Exercise 3 — Income from one student
+- Exercise 4 — Redbubble upload target
+- Exercise 5 — AI study hours
+- Exercise 6 — Savings goal
+- Exercise 7 — Travel budget split
+- Exercise 8 — Lesson package price
+- Exercise 9 — Personal introduction
+- Exercise 10 — Day 3 reflection inside Python
+
+Although I ran into a bug in Exercise 9, I used it as a learning opportunity. The issue happened because I found it difficult to combine strings and variables properly inside `print()`.
+
+Fortunately, I learnt about `f-strings`, which made it easier to write cleaner sentences using variables.
+
+### Reflection
+
+Today helped me practise variables, numbers, strings, calculations, and `print()` statements. I also learnt that bugs are part of the learning process, and fixing them helps me understand Python better.
+
+Task for today is done.
