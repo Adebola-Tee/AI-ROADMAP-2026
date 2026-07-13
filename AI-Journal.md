@@ -80,9 +80,9 @@ cells namely Markdown and code cells. The Markdown is for writing note while the
 
 codes. I successfully ran my first code on Jupyter notebook. The little project I worked on was creating a calculator to estimate
 
-my monthly income, which was successful. I saved this file as 
+my monthly income, which was successful. I saved this file as
 
-```text
+````text
 day-02-tutoring-income-calculator.ipynb
 ```text
 
@@ -114,3 +114,65 @@ Fortunately, I learnt about `f-strings`, which made it easier to write cleaner s
 Today helped me practise variables, numbers, strings, calculations, and `print()` statements. I also learnt that bugs are part of the learning process, and fixing them helps me understand Python better.
 
 Task for today is done.
+
+
+## Day 4 — July 11, 2026
+
+### What I Did Today
+
+Today, I worked on a mini-project that combined the basic Python concepts I learnt earlier this week.
+
+The project was titled `Tutoring Monthly Income Estimator`.
+
+In this project, I practised using:
+
+- `variables`
+- `print()`
+- `f-strings`
+- basic calculations
+- Markdown and code cells in Jupyter Notebook
+
+I enjoyed writing the code in Jupyter Notebook because I was able to build the project step by step and see the output clearly.
+
+After successfully running the code, I saved the notebook file and moved on to the GitHub part of the task.
+
+### GitHub Progress
+
+I created a new repository on GitHub called `ai-roadmap-2026`.
+
+After creating the repository, I opened my project folder in VS Code. From the VS Code terminal, I connected my local folder to the GitHub repository, committed my work, and pushed the project to GitHub.
+
+I also confirmed that the project was successfully uploaded to the GitHub repository.
+
+### Reflection
+
+Today felt more serious because I did not just practise separate exercises. I built a small real-life project and pushed it to GitHub.
+
+This helped me understand how Jupyter Notebook, VS Code, Git, and GitHub can work together in a real workflow.
+
+With this, I have completed my Day 4 challenge.
+````
+
+## Day 5 — July 12, 2026
+
+### What I Did Today
+
+Today, I worked on a more complex mini-project. The project enabled me to learn about `input()` and how it is different from `print()`.
+
+I also watched a YouTube video on how to convert strings to numbers using `float()` and `int()`.
+
+I enjoyed today’s session because it stretched me more than the previous days. I was also able to write multi-line code and run it successfully.
+
+### What I Practised
+
+- `input()`
+- `print()`
+- `float()`
+- `int()`
+- variables
+- calculations
+- f-strings
+
+### Reflection
+
+Today helped me understand how to make a Python program more interactive by allowing the user to enter values. This made the project feel more practical and useful.
