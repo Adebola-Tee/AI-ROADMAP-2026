@@ -176,3 +176,168 @@ I enjoyed today’s session because it stretched me more than the previous days.
 ### Reflection
 
 Today helped me understand how to make a Python program more interactive by allowing the user to enter values. This made the project feel more practical and useful.
+
+## Day 6 — July 13, 2026
+
+### What I Did Today
+
+Today, I reviewed and cleaned up my Week 1 AI/ML learning folder.
+
+### What I Improved
+
+I improved my Day 5 notebook by adding comments and making the code easier to understand.
+
+### README Progress
+
+I created a `README.md` file to explain what my repository is about, the tools I used, and what I learnt during Week 1.
+
+### What I Practised
+
+- Reviewing code
+- Adding comments
+- Writing documentation
+- Updating GitHub
+
+### Reflection
+
+Today helped me understand that coding is not only about writing programs. It is also important to organize, explain, document, and improve my work.
+
+### Evidence
+
+I updated my repository and pushed the changes to GitHub.
+
+## Day 7 - July 14, 2026
+
+All I did was to send my report to AI/ML raod map page for a review
+
+## Day 8 — July 15, 2026
+
+### What I Practised
+
+Today, I learnt how to convert temperature from `Celsius` to `Fahrenheit`.
+
+I built a simple temperature converter using Python. The program asked the user to enter a temperature in Celsius, converted the value to Fahrenheit, and displayed the result.
+
+### What I Used
+
+- `input()`
+- `float()`
+- variables
+- arithmetic calculation
+- `f-strings`
+
+### Reflection
+
+Today helped me practise using numbers and formulas in Python. I also improved my understanding of how `f-strings` can be used to display clean results.
+
+### Evidence
+
+I saved my work as `week-02-day-01-temperature-converter.ipynb`.
+
+## Day 9 — July 16, 2026
+
+### What I Learnt Today
+
+Today, I built a simple BMI Calculator using Python.
+
+I learnt how to calculate Body Mass Index using the formula:
+
+```text
+BMI = weight / (height * height)
+
+### What I Practised
+
+In today’s project, I practised using:
+
+input()
+float()
+variables
+arithmetic calculation
+f-strings
+:.2f for rounding numbers to 2 decimal places
+What I Found Interesting
+
+I learnt that :.2f is used inside an f-string to format a decimal number neatly.
+
+For example, instead of printing a long number, Python can round it to 2 decimal places.
+
+Reflection
+
+Today helped me understand how Python can be used to solve a real-life calculation. I also became more confident using formulas, user input, and clean output formatting.
+
+Evidence
+
+I saved my work as week-02-day-02-bmi-calculator.ipynb.
+```
+
+## Day 10 — July 17, 2026
+
+### What I Learnt Today
+
+Today, I worked on a Student Grade Predictor using Python.
+
+I learnt how to use `if`, `elif`, and comparison operators to check where a student’s score falls within a range.
+
+### What I Practised
+
+In today’s project, I practised:
+
+- `input()`
+- `int()`
+- variables
+- `if`
+- `elif`
+- comparison operators like `<=` and `>=`
+- `f-strings`
+
+### What I Built
+
+I built a program that asks for a student’s name and score. Based on the score entered, the program checks the correct score range and prints a suitable result.
+
+For example, if the student scores within a certain range, Python gives a response that matches that category.
+
+### Reflection
+
+Today helped me understand that Python can make decisions using conditions. This felt like a step forward because my previous projects mostly calculated values, but today’s project responded differently depending on the user’s input.
+
+I also learnt how mathematical comparison signs can be used in Python to create score ranges.
+
+### Evidence
+
+I saved my work as `week-02-day-03-student-grade-predictor.ipynb`.
+
+## Day 11 — July 18, 2026
+
+### What I Learnt Today
+
+Today, I built a simple quiz program using Python.
+
+I learnt how to use `if` and `else` statements to check whether a user’s answer is correct or incorrect.
+
+### What I Practised
+
+- `input()`
+- `int()`
+- variables
+- `if`
+- `else`
+- score counting
+- `score += 1`
+- `f-strings`
+- `time.sleep()`
+
+### What I Built
+
+I built a 3-question quiz program. The program asked the user three questions, checked each answer, added points for correct answers, and printed the final score.
+
+### Mistake I Corrected
+
+At first, I printed `total_score`, which always showed 3. I later learnt that `total_score` means the maximum possible score, while `score` means the number of questions the user got correct.
+
+### Reflection
+
+Today helped me understand how Python can track a user’s progress and give different results based on their answers. This felt more interactive than the previous projects.
+
+### Evidence
+
+I saved my work as `week-02-day-04-quiz-program.ipynb`.
