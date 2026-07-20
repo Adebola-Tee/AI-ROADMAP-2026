@@ -341,3 +341,84 @@ Today helped me understand how Python can track a user’s progress and give dif
 ### Evidence
 
 I saved my work as `week-02-day-04-quiz-program.ipynb`.
+
+## Day 12 — July 19, 2026
+
+### What I Learnt Today
+
+Today, I built a simple Daily Task Tracker using Python.
+
+I learnt that a list can be used to store multiple items in one variable. I also learnt how to add new items to a list using `.append()`.
+
+### What I Practised
+
+- lists
+- `.append()`
+- `input()`
+- `if`
+- `else`
+- f-strings
+- checking whether an item exists in a list
+
+### What I Built
+
+I built a Daily Task Tracker that stores tasks in a list. The program allows the user to enter a completed task, then checks whether that task is present in the task list.
+
+If the task is found, the program prints a success message. If the task is not found, it prints a message saying the task is not present in the list.
+
+### Mistake I Corrected
+
+At first, I typed a value that was not in the list, so the program correctly returned the `else` message. This helped me understand that Python checks for the exact item inside the list.
+
+### Reflection
+
+Today helped me understand the difference between storing one value in a variable and storing multiple values in a list. I also practised combining lists with `input()` and `if/else`, which made the program more interactive.
+
+### Evidence
+
+I saved my work as `week-02-day-05-daily-task-tracker.ipynb`.
+
+## Day 13 — July 20, 2026
+
+### What I Learnt Today
+
+Today, I focused on reviewing, cleaning, and improving my Week 2 Python projects.
+
+I learnt that coding is not only about writing new programs every day. It is also important to review old work, fix mistakes, add comments, and make the project easier to understand.
+
+### What I Did Today
+
+I reviewed my Week 2 notebooks and checked the projects I had already completed.
+
+The projects I reviewed include:
+
+- Temperature Converter
+- BMI Calculator
+- Student Grade Predictor
+- Quiz Program
+- Daily Task Tracker
+
+### What I Improved
+
+I cleaned up small mistakes in my notebooks and added comments to make the code clearer.
+
+I also updated my `README.md` file so that my GitHub repository explains my Week 2 focus and the projects I worked on.
+
+### What I Practised
+
+- reviewing code
+- debugging small mistakes
+- adding comments
+- improving documentation
+- updating `README.md`
+- preparing my work for GitHub
+
+### Reflection
+
+Today helped me understand that good programming is not just about making the code work. It is also about making the code readable, organized, and easy for someone else to understand.
+
+This made my Week 2 work look more professional.
+
+### Evidence
+
+I reviewed my Week 2 notebooks, updated my `README.md`, and prepared my files for GitHub.

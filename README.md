@@ -39,3 +39,15 @@ The focus of Week 1 was setting up my learning environment, understanding beginn
 ## Reflection
 
 This week helped me build confidence with the basic tools needed for my AI/ML journey. I moved from installing tools to writing simple Python programs and pushing my work to GitHub.
+
+## Week 2 Focus
+
+This week, I practised Python basics including variables, strings, numbers, input, conditions, lists, and simple beginner projects.
+
+## Week 2 Projects
+
+- Temperature Converter
+- BMI Calculator
+- Student Grade Predictor
+- Quiz Program
+- Daily Task Tracker
