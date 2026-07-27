@@ -51,3 +51,30 @@ This week, I practised Python basics including variables, strings, numbers, inpu
 - Student Grade Predictor
 - Quiz Program
 - Daily Task Tracker
+
+## Week 3 Focus
+
+This week, I started learning Python for data. I practised working with CSV files, pandas, DataFrames, selecting columns, filtering rows, sorting data, counting values, and creating simple reports.
+
+## Week 3 Projects
+
+- Pandas Introduction
+- Pandas Data Selection
+- Pandas Practice Exercises
+- Student Class Report Generator
+- Personal Tutoring Data Analysis
+
+## Week 3 Skills Practised
+
+- `pd.read_csv()`
+- `.head()`
+- `.info()`
+- `.shape`
+- selecting columns
+- filtering rows
+- `.sort_values()`
+- `.value_counts()`
+- `.sum()`
+- `.mean()`
+- `.max()`
+- `.nunique()`

@@ -422,3 +422,218 @@ This made my Week 2 work look more professional.
 ### Evidence
 
 I reviewed my Week 2 notebooks, updated my `README.md`, and prepared my files for GitHub.
+
+## Day 15 — July 22, 2026
+
+### What I Learnt Today
+
+Today, I started Week 3, which focuses on Python for data.
+
+I learnt that Python can work with table-like data using a library called `pandas`. I also learnt that a table in pandas is called a `DataFrame`.
+
+### What I Practised
+
+Today, I practised using pandas to load and inspect data.
+
+I worked with a CSV file and used two different methods to load the file into Python:
+
+- loading the CSV file using the full Windows file path
+- loading the CSV file directly from my project folder
+
+This helped me understand that Python can read a CSV file from different locations, as long as the file path is correct.
+
+### What I Used
+
+- `import pandas as pd`
+- `pd.read_csv()`
+- `.head()`
+- `.info()`
+- `.shape`
+- CSV file handling
+- DataFrame inspection
+
+### What I Built
+
+I worked with a student class dataset and loaded it into pandas as a DataFrame.
+
+After loading the data, I inspected it by checking the first few rows, the structure of the table, the column information, and the shape of the dataset.
+
+### Reflection
+
+Today helped me understand that data is a major part of AI/ML. I also learnt that pandas makes it easier to work with structured data like CSV files.
+
+I am happy that I practised two different ways of loading a CSV file because it helped me understand file paths better and made the lesson more practical.
+
+### Evidence
+
+I saved my work as `week-03-day-01-pandas-introduction.ipynb`.
+
+## Day 16 — July 23, 2026
+
+### What I Learnt Today
+
+Today, I learnt how to select, filter, sort, and explore data using pandas.
+
+I used the same student class CSV file from yesterday and practised asking questions from the dataset.
+
+### What I Practised
+
+- loading a CSV file with `pd.read_csv()`
+- selecting one column
+- selecting multiple columns
+- filtering rows using conditions
+- filtering students by subject
+- filtering students by fee
+- sorting data using `.sort_values()`
+- counting values using `.value_counts()`
+
+### What I Built
+
+I built a small Student Class Data Explorer.
+
+The notebook helped me answer questions such as:
+
+- Which students are taking Mathematics?
+- Which subjects appear in the dataset?
+- Which students pay certain fee amounts?
+- What does the data look like when sorted by fee?
+
+### Reflection
+
+Today helped me understand that pandas is not only used to open CSV files. It can also be used to ask questions from data and extract specific information.
+
+I also understood better how conditions work inside pandas when filtering rows.
+
+### Evidence
+
+I saved my work as `week-03-day-02-pandas-data-selection.ipynb`.
+
+## Day 17 — July 24, 2026
+
+### What I Learnt Today
+
+Today, I practised pandas data selection and filtering using my student classes CSV file.
+
+I learnt how to extract specific columns, filter rows using conditions, sort data, and count repeated values in a column.
+
+### What I Practised
+
+- `pd.read_csv()`
+- selecting one column
+- selecting multiple columns
+- filtering rows with conditions
+- filtering by subject
+- filtering by fee
+- filtering by lesson duration
+- sorting data using `.sort_values()`
+- counting values using `.value_counts()`
+
+### What I Built
+
+I worked on a pandas practice notebook using my student class dataset.
+
+I answered questions such as:
+
+- Which students are taking Mathematics?
+- Which students pay a certain fee?
+- Which students have 60-minute lessons?
+- Which students have class on Tuesday?
+- What does the data look like when sorted by fee?
+- What does the data look like when sorted alphabetically by student name?
+
+### Mistake I Corrected
+
+I noticed that using `.value_counts("Student")` counts how many times each student appears.
+
+To count how many students are taking each subject, the better code is:
+
+```python
+df["Subject"].value_counts()
+```
+## Day 18 — July 25, 2026
+
+### What I Learnt Today
+
+Today, I built a Student Class Report Generator using pandas.
+
+I learnt how to turn my pandas practice into a small data report project. Instead of only practising separate pandas commands, I used them together to answer questions from my student class dataset.
+
+### What I Practised
+
+- `pd.read_csv()`
+- filtering rows
+- filtering by subject
+- filtering by fee
+- filtering by lesson duration
+- sorting with `.sort_values()`
+- counting subjects with `.value_counts()`
+- calculating total fees with `.sum()`
+
+### What I Built
+
+I built a report that showed:
+
+- the full student class table
+- Mathematics students
+- students who pay certain fee amounts
+- students with 60-minute lessons
+- students sorted by `Fee_GBP`
+- how many students are taking each subject
+- the total expected class fee
+
+### Mistake I Noticed
+
+I noticed that using `>= 20` means greater than or equal to 20, while using `> 20` means strictly greater than 20.
+
+This helped me understand filtering conditions more clearly.
+
+### Reflection
+
+Today helped me see how pandas can be used to create simple reports from real data. I am now moving from just opening and inspecting data to using pandas to generate useful summaries.
+
+### Evidence
+
+I saved my work as `week-03-day-04-student-class-report.ipynb`.
+## Day 19 — July 26, 2026
+
+### What I Learnt Today
+
+Today, I applied pandas to a personal tutoring context.
+
+I used my student class dataset to answer questions about my tutoring schedule, subjects, class fees, and lesson patterns.
+
+### What I Practised
+
+- `pd.read_csv()`
+- `.value_counts()`
+- `.idxmax()`
+- `.sum()`
+- `.mean()`
+- `.max()`
+- `.nunique()`
+- filtering rows
+- using f-strings to print clearer results
+
+### What I Built
+
+I built a Personal Tutoring Data Analysis notebook.
+
+The notebook answered questions such as:
+
+- how many students I have
+- how many subjects I teach
+- which subject appears the most
+- my total expected class fee
+- my average fee per class
+- which students pay the highest fee
+- which day has the most classes
+
+### Reflection
+
+Today helped me understand how pandas can turn ordinary class records into useful tutoring insights.
+
+I am beginning to see how data analysis works in real life. Instead of only viewing a table, I can now ask questions from the data and get meaningful answers.
+
+### Evidence
+
+I saved my work as `week-03-day-05-personal-tutoring-analysis.ipynb`.
