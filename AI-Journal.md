@@ -1089,3 +1089,144 @@ This helped me see how data can be turned into a clear story.
 ### Evidence
 
 I saved my work as `week-05-day-04-weekly-tutoring-data-analysis.ipynb`.
+
+## Day 33 — August 9, 2026
+
+### What I Learnt Today
+
+Today, I applied data storytelling to my personal AI learning journey.
+
+I used a personal productivity-style dataset to analyse study hours, tasks completed, and focus score across different days.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- using personal learning data
+- creating a bar chart
+- creating a line chart
+- creating a scatter plot
+- interpreting charts
+- identifying patterns
+- turning observations into insights
+- making decisions from data
+
+### What I Built
+
+I built a Personal Data Storytelling notebook.
+
+The notebook included three charts:
+
+- a bar chart showing AI study hours by day
+- a line chart showing tasks completed by day
+- a scatter plot showing the relationship between study hours and focus score
+
+### Key Understanding
+
+I learnt that different charts serve different purposes.
+
+A bar chart helps compare categories.
+
+A line chart helps show change or trend.
+
+A scatter plot helps show the relationship between two numerical variables.
+
+I also learnt that charts do not automatically tell the full truth. They help me see patterns, but I still need to interpret those patterns carefully.
+
+### Insights
+
+From the charts, I noticed that Friday had the highest study hours, while Wednesday had the lowest.
+
+I also noticed that tasks completed dropped on Wednesday but increased strongly on Thursday and Friday.
+
+The scatter plot showed that as study hours increased, focus score also increased.
+
+### Reflection
+
+Today helped me understand that data storytelling is not just about plotting charts.
+
+It is about asking:
+
+- What does the chart show?
+- What pattern can I see?
+- Why might this pattern exist?
+- What decision can I make from it?
+
+This helped me move from simply creating charts to actually reasoning with data.
+
+### Evidence
+
+I saved my work as `week-05-day-05-personal-data-storytelling.ipynb`.
+
+## Week 5: Data Storytelling
+
+### Focus
+
+This week, I learnt how to move from simply viewing data to explaining what the data means.
+
+The focus was on:
+
+- exploratory data analysis
+- charts
+- observations
+- insights
+- simple data storytelling
+- mini data reports
+
+### What I Practised
+
+I practised using `pandas` and `Matplotlib` to explore and visualise data.
+
+The main skills I used were:
+
+- creating pandas DataFrames
+- inspecting data with `head()`, `info()`, and `describe()`
+- checking missing values with `isnull().sum()`
+- calculating totals and averages
+- creating bar charts
+- creating line charts
+- creating scatter plots
+- interpreting chart patterns
+- writing insights from data
+
+### Week 5 Projects
+
+- Data Storytelling Introduction
+- Explore and Visualise Data
+- Data Storytelling Practice
+- Weekly Tutoring Data Analysis
+- Personal Data Storytelling
+
+### Key Concepts
+
+A `bar chart` helps compare categories.
+
+A `line chart` helps show change or trends.
+
+A `scatter plot` helps show the relationship between two numerical values.
+
+An `observation` is something I can clearly see from the data.
+
+An `insight` explains what the observation might mean.
+
+A `data story` combines data, charts, observations, insights, and decisions.
+
+### Main Understanding
+
+This week helped me understand that charts are not just for decoration.
+
+A chart should help me answer questions such as:
+
+- What does the chart show?
+- What pattern can I see?
+- Why might the pattern exist?
+- What decision can I make from it?
+
+### Reflection
+
+Week 5 helped me move from basic data analysis into data storytelling.
+
+I learnt that data becomes more useful when I can explain it clearly. I also learnt that different charts have different purposes, and choosing the right chart helps make the message clearer.
+
+The most important thing I learnt this week is:
+
+Data storytelling means using numbers, charts, and explanations to communicate a clear message.
