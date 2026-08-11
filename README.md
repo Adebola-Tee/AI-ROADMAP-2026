@@ -78,3 +78,33 @@ This week, I started learning Python for data. I practised working with CSV file
 - `.mean()`
 - `.max()`
 - `.nunique()`
+
+## Week 4 Focus
+
+This week, I started learning the maths behind machine learning in a beginner-friendly way.
+
+I focused on understanding:
+
+- dataset
+- features
+- target/label
+- prediction
+- actual value
+- error
+- absolute error
+- loss
+
+## Week 4 Projects
+
+- ML Story with Pandas
+- ML Error Practice
+- Understanding Model Predictions and Errors
+- Tutoring Prediction Analysis
+
+## Key Understanding
+
+This week helped me understand that machine learning is not only about making predictions. It is also about comparing predictions with actual values and measuring how wrong the model is.
+
+The error shows the difference between the actual value and the predicted value.
+
+The loss gives a summary of how wrong the model is overall.

@@ -550,6 +550,7 @@ To count how many students are taking each subject, the better code is:
 ```python
 df["Subject"].value_counts()
 ```
+
 ## Day 18 — July 25, 2026
 
 ### What I Learnt Today
@@ -594,6 +595,7 @@ Today helped me see how pandas can be used to create simple reports from real da
 ### Evidence
 
 I saved my work as `week-03-day-04-student-class-report.ipynb`.
+
 ## Day 19 — July 26, 2026
 
 ### What I Learnt Today
@@ -637,3 +639,453 @@ I am beginning to see how data analysis works in real life. Instead of only view
 ### Evidence
 
 I saved my work as `week-03-day-05-personal-tutoring-analysis.ipynb`.
+
+## Day 22 — July 29, 2026
+
+### What I Learnt Today
+
+Today, I learnt the basic story behind machine learning.
+
+I learnt that machine learning is about using data to help a model make predictions. The model studies patterns from the data and then tries to predict an answer.
+
+### Key Concepts
+
+A `dataset` is a collection of data. In the student score example, the full table is the dataset.
+
+A `row` represents one observation. In this example, each row represents one student.
+
+A `feature` is the information given to the model to help it make a prediction. In the example, `Study hours` and `Attendance` are features.
+
+A `target` or `label` is the correct answer we want the model to learn or predict. In the example, the `Actual score` is the target.
+
+A `model` is the system that learns from the features and tries to make predictions.
+
+A `prediction` is the answer produced by the model. In the example, the `Predicted score` is the model’s answer.
+
+The `actual value` is the real correct value. In the example, the actual score is the real score the student got.
+
+The `error` is the difference between the actual value and the predicted value. It shows how far the model’s prediction is from the truth.
+
+A `loss` is a way of summarising how wrong the model is overall. If the loss is high, the model is making big mistakes. If the loss is low, the model is performing better.
+
+### Reflection
+
+Today helped me understand machine learning more clearly. I now see that AI/ML is not magic. It uses data, learns from features, makes predictions, compares them with actual values, checks the error, and uses loss to understand how much improvement is needed.
+
+No coding was required today. The main goal was understanding the concept.
+
+## Day 23 — July 30, 2026
+
+### What I Learnt Today
+
+Today, I represented the basic machine learning story using pandas.
+
+I learnt how concepts like `features`, `actual value`, `predicted value`, and `error` can be shown inside a table.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- using a dictionary to create table data
+- identifying features in a dataset
+- identifying the actual value
+- identifying the predicted value
+- creating a new column in pandas
+- calculating prediction error
+
+### What I Built
+
+I created a small student score table with the following columns:
+
+- `student`
+- `study_hours`
+- `attendance`
+- `actual_score`
+- `predicted_score`
+
+After creating the table, I added a new column called `error`.
+
+The error column showed the difference between the actual score and the predicted score.
+
+### Key Understanding
+
+I learnt that in machine learning, the model makes a prediction, but we need to compare that prediction with the actual value.
+
+The difference between the actual value and the predicted value is called the error.
+
+In this example:
+
+- `study_hours` and `attendance` were the features
+- `actual_score` was the target or actual value
+- `predicted_score` was the model’s prediction
+- `error` showed how wrong or close the prediction was
+
+### Reflection
+
+Today helped me understand the machine learning story more clearly. I now see that machine learning is not just about coding. It is also about understanding the relationship between data, predictions, actual values, and errors.
+
+I am not training a model yet, but I now understand how prediction error can be represented in a pandas table.
+
+### Evidence
+
+I saved my work as `week-04-day-02-ml-story-with-pandas.ipynb`.
+
+## Day 24 — July 31, 2026
+
+### What I Learnt Today
+
+Today, I practised the machine learning story using pandas.
+
+I worked with a small student score dataset and used it to understand features, target values, predictions, actual values, errors, and loss.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- identifying feature columns
+- identifying the target column
+- calculating prediction error
+- using `.abs()` to remove negative signs from errors
+- finding the closest prediction
+- finding the furthest prediction
+- calculating the average actual score
+- calculating the average predicted score
+- calculating mean absolute error as a simple loss function
+- using `:.2f` to display numbers to 2 decimal places
+
+### What I Built
+
+I built a small ML Error Practice notebook.
+
+The notebook helped me answer questions such as:
+
+- Which columns are the features?
+- Which column is the target?
+- What does each row represent?
+- What is each student’s prediction error?
+- Which prediction was closest?
+- Which prediction was furthest away?
+- What is the average actual score?
+- What is the average predicted score?
+
+### Key Understanding
+
+Today, I understood that error is the difference between the actual value and the predicted value.
+
+I also learnt that a simple loss function can summarise how wrong the predictions are overall.
+
+The loss function I used today was mean absolute error, which means finding the average of the absolute errors.
+
+### Reflection
+
+Today helped me understand that machine learning is not just about making predictions. It is also about checking how close or far those predictions are from the actual values.
+
+I am beginning to understand how pandas, errors, and loss functions connect to machine learning.
+
+### Evidence
+
+I saved my work as `week-04-day-03-ml-error-practice.ipynb`.
+
+## Day 25 — August 1, 2026
+
+### What I Learnt Today
+
+Today, I built a mini-project titled `Understanding Model Predictions and Errors`.
+
+I used pandas to create a student final exam prediction table and analysed how close the predicted scores were to the actual final scores.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- using features such as `homework_score`, `mock_exam_score`, and `participation_score`
+- identifying the actual final score
+- identifying the predicted final score
+- calculating prediction error
+- calculating absolute error using `.abs()`
+- calculating average absolute error using `.mean()`
+- identifying the prediction with the largest error
+
+### What I Built
+
+I built a small model prediction error analysis project.
+
+The table included students, their performance-related features, their actual final scores, and their predicted final scores.
+
+After creating the table, I added:
+
+- an `error` column
+- an `absolute_error` column
+- an average absolute error result
+- a largest error result
+
+### Key Understanding
+
+Today helped me understand that a model’s prediction is not enough on its own. We also need to compare the prediction with the actual value to see how wrong or close the model was.
+
+I also understood that absolute error is useful because it focuses on the size of the mistake, whether the error is positive or negative.
+
+### Reflection
+
+Today felt like a stronger mini-project because I did not just repeat the exact practice data from the previous day. I created a new student-based dataset and used it to analyse prediction errors.
+
+This helped me see how pandas can be used to evaluate model predictions in a simple and beginner-friendly way.
+
+### Evidence
+
+I saved my work as `week-04-day-04-model-predictions-errors.ipynb`.
+
+## Day 25 — August 1, 2026
+
+### What I Learnt Today
+
+Today, I built a mini-project titled `Understanding Model Predictions and Errors`.
+
+I used pandas to create a student final exam prediction table and analysed how close the predicted scores were to the actual final scores.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- using features such as `homework_score`, `mock_exam_score`, and `participation_score`
+- identifying the actual final score
+- identifying the predicted final score
+- calculating prediction error
+- calculating absolute error using `.abs()`
+- calculating average absolute error using `.mean()`
+- identifying the prediction with the largest error
+
+### What I Built
+
+I built a small model prediction error analysis project.
+
+The table included students, their performance-related features, their actual final scores, and their predicted final scores.
+
+After creating the table, I added:
+
+- an `error` column
+- an `absolute_error` column
+- an average absolute error result
+- a largest error result
+
+### Key Understanding
+
+Today helped me understand that a model’s prediction is not enough on its own. We also need to compare the prediction with the actual value to see how wrong or close the model was.
+
+I also understood that absolute error is useful because it focuses on the size of the mistake, whether the error is positive or negative.
+
+### Reflection
+
+Today felt like a stronger mini-project because I did not just repeat the exact practice data from the previous day. I created a new student-based dataset and used it to analyse prediction errors.
+
+This helped me see how pandas can be used to evaluate model predictions in a simple and beginner-friendly way.
+
+### Evidence
+
+I saved my work as `week-04-day-04-model-predictions-errors.ipynb`.
+
+## Day 29 — August 5, 2026
+
+### What I Learnt Today
+
+Today, I started Week 5, which focuses on data storytelling.
+
+I learnt that data storytelling is about using data, charts, observations, and explanations to communicate a clear message.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- working with a fictional tutoring dataset
+- understanding data analysis
+- understanding Exploratory Data Analysis (EDA)
+- understanding observation
+- understanding insight
+- understanding data story
+
+### What I Built
+
+I created a simple tutoring dataset using pandas.
+
+The dataset included:
+
+- `day`
+- `lessons`
+- `hours_worked`
+- `income`
+
+This dataset will be used throughout Week 5 to practise data storytelling.
+
+### Key Understanding
+
+I learnt that data analysis means examining data to answer questions.
+
+I also learnt that EDA means exploring data before making conclusions.
+
+An observation is something directly visible in the data, while an insight explains what the observation might mean.
+
+A data story combines numbers, charts, and explanation to communicate a finding clearly.
+
+### Reflection
+
+Today helped me understand that data is not useful only because it exists in a table. It becomes more useful when I can explain what it means.
+
+This week, I want to learn how to move from simply displaying data to finding patterns and communicating insights.
+
+### Evidence
+
+I saved my work as `week-05-day-01-data-storytelling-introduction.ipynb`.
+
+## Day 30 — August 6, 2026
+
+### What I Learnt Today
+
+Today, I explored and visualised data using pandas and Matplotlib.
+
+I learnt that data storytelling is not only about looking at a table. It also involves using charts to make patterns easier to see.
+
+### What I Practised
+
+- installing/checking Matplotlib
+- importing `pandas`
+- importing `matplotlib.pyplot`
+- creating a pandas DataFrame
+- using `df.head()`
+- using `df.info()`
+- using `df.describe()`
+- using `df.isnull().sum()`
+- creating a bar chart with `plt.bar()`
+
+### What I Built
+
+I created a bar chart showing tutoring income by day.
+
+The chart helped me compare income across different days of the week.
+
+### Key Understanding
+
+I learnt that:
+
+- `df.head()` previews the data
+- `df.info()` shows the structure of the dataset
+- `df.describe()` gives basic statistics
+- `df.isnull().sum()` checks for missing values
+
+I also learnt that a bar chart is useful for comparing categories, such as income across different days.
+
+### Reflection
+
+Today helped me move from only reading data in a table to seeing the data visually.
+
+I now understand that charts can make data easier to interpret and can help communicate a clearer story.
+
+### Evidence
+
+I saved my work as `week-05-day-02-explore-and-visualise-data.ipynb`.
+
+## Day 31 — August 7, 2026
+
+### What I Learnt Today
+
+Today, I practised data storytelling using pandas and Matplotlib.
+
+I used the Week 5 tutoring dataset to answer questions from the data and create charts that make the data easier to understand.
+
+### What I Practised
+
+- calculating total income with `.sum()`
+- calculating average daily income with `.mean()`
+- calculating total lessons
+- calculating average working hours
+- finding the day with the highest income using `.idxmax()`
+- filtering days with at least 4 lessons
+- checking for missing values with `.isnull().sum()`
+- creating a line chart
+- creating a scatter plot
+
+### What I Built
+
+I completed a data storytelling practice notebook.
+
+I answered questions about income, lessons, working hours, and missing values. I also created two charts:
+
+- a line chart showing daily tutoring income
+- a scatter plot showing the relationship between hours worked and income
+
+### Mistake I Corrected
+
+At first, I got errors because my `df` was no longer behaving like a full DataFrame/table.
+
+I corrected this by recreating the DataFrame properly and then rerunning the pandas operations.
+
+This helped me understand that `df` should remain the main table, and calculated results should be stored in separate variables if needed.
+
+### Key Understanding
+
+I learnt that a line chart is useful for showing changes or trends across days.
+
+I also learnt that a scatter plot is useful for showing the relationship between two numerical values, such as hours worked and income.
+
+### Reflection
+
+Today helped me understand that data storytelling is not only about calculating answers. It is also about using charts to make patterns easier to see.
+
+I am becoming more comfortable using pandas and Matplotlib together to explore data and communicate simple insights.
+
+### Evidence
+
+I saved my work as `week-05-day-03-data-storytelling-practice.ipynb`.
+
+## Day 32 — August 8, 2026
+
+### What I Learnt Today
+
+Today, I built a mini-project titled `Weekly Tutoring Data Analysis`.
+
+I used pandas and Matplotlib to analyse a fictional weekly tutoring dataset and turn the data into simple insights.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- inspecting data with `df.head()`, `df.info()`, and `df.describe()`
+- checking for missing values with `df.isnull().sum()`
+- calculating summary statistics
+- calculating total income
+- calculating average daily income
+- calculating total lessons
+- calculating average hours worked
+- creating a bar chart
+- creating a line chart
+- creating a scatter plot
+- writing insights from data
+
+### What I Built
+
+I built a Weekly Tutoring Data Analysis notebook.
+
+The project included:
+
+- project introduction
+- library imports
+- dataset creation
+- data inspection
+- missing value check
+- summary statistics
+- three charts
+- three insights
+- conclusion
+
+### Key Understanding
+
+Today helped me understand that a data project is not only about writing code.
+
+A proper data analysis project should include the data, calculations, charts, explanations, insights, and conclusion.
+
+I also understood that charts make patterns easier to see. For example, the charts helped show which day produced the highest income and how hours worked related to income.
+
+### Reflection
+
+Today felt like a real mini data storytelling project.
+
+I moved from simple exercises into a more complete project where I used pandas to analyse data and Matplotlib to visualise the results.
+
+This helped me see how data can be turned into a clear story.
+
+### Evidence
+
+I saved my work as `week-05-day-04-weekly-tutoring-data-analysis.ipynb`.
