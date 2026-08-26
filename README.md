@@ -108,3 +108,77 @@ This week helped me understand that machine learning is not only about making pr
 The error shows the difference between the actual value and the predicted value.
 
 The loss gives a summary of how wrong the model is overall.
+
+## Week 5: Data Storytelling
+
+### Focus
+
+This week, I learnt how to move from simply viewing data to explaining what the data means.
+
+The focus was on:
+
+- exploratory data analysis
+- charts
+- observations
+- insights
+- simple data storytelling
+- mini data reports
+
+### What I Practised
+
+I practised using `pandas` and `Matplotlib` to explore and visualise data.
+
+The main skills I used were:
+
+- creating pandas DataFrames
+- inspecting data with `head()`, `info()`, and `describe()`
+- checking missing values with `isnull().sum()`
+- calculating totals and averages
+- creating bar charts
+- creating line charts
+- creating scatter plots
+- interpreting chart patterns
+- writing insights from data
+
+### Week 5 Projects
+
+- Data Storytelling Introduction
+- Explore and Visualise Data
+- Data Storytelling Practice
+- Weekly Tutoring Data Analysis
+- Personal Data Storytelling
+
+### Key Concepts
+
+A `bar chart` helps compare categories.
+
+A `line chart` helps show change or trends.
+
+A `scatter plot` helps show the relationship between two numerical values.
+
+An `observation` is something I can clearly see from the data.
+
+An `insight` explains what the observation might mean.
+
+A `data story` combines data, charts, observations, insights, and decisions.
+
+### Main Understanding
+
+This week helped me understand that charts are not just for decoration.
+
+A chart should help me answer questions such as:
+
+- What does the chart show?
+- What pattern can I see?
+- Why might the pattern exist?
+- What decision can I make from it?
+
+### Reflection
+
+Week 5 helped me move from basic data analysis into data storytelling.
+
+I learnt that data becomes more useful when I can explain it clearly. I also learnt that different charts have different purposes, and choosing the right chart helps make the message clearer.
+
+The most important thing I learnt this week is:
+
+Data storytelling means using numbers, charts, and explanations to communicate a clear message.

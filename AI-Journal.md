@@ -1230,3 +1230,108 @@ I learnt that data becomes more useful when I can explain it clearly. I also lea
 The most important thing I learnt this week is:
 
 Data storytelling means using numbers, charts, and explanations to communicate a clear message.
+
+## Day 36 — August 12, 2026
+
+### What I Learnt Today
+
+Today, I started Week 6, which focuses on machine-learning foundations.
+
+I learnt that machine learning is about giving a model examples, allowing it to learn patterns, and then testing it with new examples to see how well it performs.
+
+### Key Concepts
+
+A `feature` is the information given to the model to help it make a prediction.
+
+A `target` or `label` is the correct answer the model is trying to predict.
+
+`Training data` is the data the model learns from.
+
+`Testing data` is new data used to check whether the model has learnt well.
+
+A `prediction` is the model’s estimated answer.
+
+`Regression` means predicting a number, such as a score, income, or price.
+
+`Classification` means predicting a category, such as pass/fail, yes/no, or approved/rejected.
+
+`Model evaluation` means checking how well the model’s predictions match the correct answers.
+
+### What I Practised
+
+I created a small student dataset with:
+
+- `study_hours`
+- `attendance`
+- `score`
+
+I identified `study_hours` and `attendance` as the features.
+
+I identified `score` as the target.
+
+I also understood that this is a regression problem because the target is a number.
+
+### Key Understanding
+
+The main idea I learnt today is:
+
+The model studies training examples, learns a pattern, makes predictions, and is then tested to see whether those predictions are good.
+
+### Reflection
+
+Today helped me understand the basic language of machine learning.
+
+I now understand that machine learning is not magic. It is a structured process where data is used to teach a model how to make predictions.
+
+I am not training a model yet, but I now understand the foundation I need before training one.
+## Day 37 — August 13, 2026
+
+### What I Learnt Today
+
+Today, I practised my first practical machine-learning foundation coding task.
+
+I learnt how to separate a dataset into features and target.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- identifying feature columns
+- identifying the target column
+- creating `X` for features
+- creating `y` for the target
+- printing the features and target separately
+
+### What I Built
+
+I created a small student dataset with:
+
+- `study_hours`
+- `attendance`
+- `score`
+
+I used `study_hours` and `attendance` as the features.
+
+I used `score` as the target.
+
+### Key Understanding
+
+I learnt that in machine learning, the model does not use the whole table blindly.
+
+The input columns are separated as `X`, while the answer column is separated as `y`.
+
+In my dataset:
+
+- `X` = `study_hours` and `attendance`
+- `y` = `score`
+
+### Reflection
+
+Today helped me understand how machine-learning data is prepared before training a model.
+
+I now understand that before a model can learn, I must first separate the clues from the answer.
+
+The features are the clues given to the model, and the target is what the model is trying to predict.
+
+### Evidence
+
+I saved my work as `week-06-day-02-features-and-target.ipynb`.
