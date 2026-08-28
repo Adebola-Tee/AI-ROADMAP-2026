@@ -182,3 +182,54 @@ I learnt that data becomes more useful when I can explain it clearly. I also lea
 The most important thing I learnt this week is:
 
 Data storytelling means using numbers, charts, and explanations to communicate a clear message.
+
+## Week 6: Machine Learning Foundations
+
+### Focus
+
+This week, I started learning the foundations of machine learning.
+
+I focused on understanding:
+
+- features
+- target/label
+- training data
+- testing data
+- regression
+- classification
+- prediction
+- model evaluation
+
+### What I Practised
+
+I practised creating small datasets and separating them into `X` and `y`.
+
+`X` represents the features or input columns.
+
+`y` represents the target or answer column.
+
+### Week 6 Projects
+
+- Machine Learning Foundations
+- Features and Target
+- Features and Target Practice
+- Student Performance Dataset Preparation
+- Tutoring Score Prediction Preparation
+
+### Key Understanding
+
+The biggest thing I learnt this week is that machine learning starts with a prediction goal.
+
+The target is what I want to predict.
+
+The features are the information available that can help predict the target.
+
+I also learnt that regression means predicting a number, while classification means predicting a category.
+
+### Reflection
+
+This week helped me understand the first real structure of machine learning.
+
+Before training a model, I must prepare the data properly by identifying the features and the target.
+
+This made machine learning feel less abstract and more practical.

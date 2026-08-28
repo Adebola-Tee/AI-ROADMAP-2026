@@ -1284,6 +1284,7 @@ Today helped me understand the basic language of machine learning.
 I now understand that machine learning is not magic. It is a structured process where data is used to teach a model how to make predictions.
 
 I am not training a model yet, but I now understand the foundation I need before training one.
+
 ## Day 37 — August 13, 2026
 
 ### What I Learnt Today
@@ -1335,3 +1336,161 @@ The features are the clues given to the model, and the target is what the model 
 ### Evidence
 
 I saved my work as `week-06-day-02-features-and-target.ipynb`.
+
+## Day 38 — August 14, 2026
+
+### What I Learnt Today
+
+Today, I practised identifying features, targets, and task types in machine learning.
+
+I focused on understanding how to look at a dataset and decide which columns should be used as inputs and which column should be the answer the model is trying to predict.
+
+### What I Practised
+
+- identifying features
+- identifying the target column
+- separating `X` and `y`
+- understanding regression problems
+- understanding classification problems
+- creating small pandas DataFrames
+- using realistic datasets to practise machine-learning thinking
+
+### What I Built
+
+I completed three practice exercises:
+
+- Student Score Prediction
+- House Price Prediction
+- Pass or Fail Prediction
+
+For each exercise, I identified the features, the target, and whether the problem was regression or classification.
+
+### Key Understanding
+
+I learnt that the target is decided by asking:
+
+`What exactly am I trying to predict?`
+
+The features are decided by asking:
+
+`What information do I already have that could help predict the target?`
+
+I also learnt that regression means predicting a number, while classification means predicting a category.
+
+### Reflection
+
+Today helped me understand machine learning in a more realistic way.
+
+I now understand that machine-learning engineers do not randomly choose features and targets. They start with the prediction goal, then choose useful information that is available before the prediction happens.
+
+This helped me see that features are the clues, while the target is the answer.
+
+### Evidence
+
+I saved my work as `week-06-day-03-features-target-practice.ipynb`.
+
+## Day 39 — August 15, 2026
+
+### What I Learnt Today
+
+Today, I built a mini-project on student performance dataset preparation.
+
+I practised how to prepare a simple dataset before training a machine-learning model.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- identifying feature columns
+- identifying the target column
+- separating the dataset into `X` and `y`
+- understanding regression problems
+- writing a simple project explanation
+
+### What I Built
+
+I built a mini-project titled `Student Performance Dataset Preparation`.
+
+The dataset included:
+
+- `study_hours`
+- `attendance`
+- `homework_score`
+- `score`
+
+I used `study_hours`, `attendance`, and `homework_score` as the features.
+
+I used `score` as the target.
+
+### Key Understanding
+
+Today helped me understand that before training a machine-learning model, the data must be prepared properly.
+
+The model needs input columns, which are the features, and one answer column, which is the target.
+
+In this project:
+
+- `X` represented the features
+- `y` represented the target
+
+### Reflection
+
+Today helped me turn my features and target practice into a cleaner mini-project.
+
+I now understand that separating `X` and `y` is an important step before model training.
+
+This project also helped me see that machine learning starts with preparing the data correctly before asking the model to learn.
+
+### Evidence
+
+I saved my work as `week-06-day-04-student-performance-prep.ipynb`.
+## Day 40 — August 16, 2026
+
+### What I Learnt Today
+
+Today, I applied machine-learning foundations to my tutoring work.
+
+I created a simple tutoring score prediction dataset and practised identifying the features, target, and task type.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- using a tutoring-related dataset
+- identifying feature columns
+- identifying the target column
+- separating the dataset into `X` and `y`
+- understanding regression in a tutoring context
+
+### What I Built
+
+I built a notebook titled `Tutoring Score Prediction Preparation`.
+
+The dataset included:
+
+- `practice_hours`
+- `attendance`
+- `homework_score`
+- `final_score`
+
+I used `practice_hours`, `attendance`, and `homework_score` as the features.
+
+I used `final_score` as the target.
+
+### Key Understanding
+
+Today helped me understand that machine learning can be applied to real tutoring situations.
+
+In this example, the model would use practice hours, attendance, and homework score as clues to predict a student’s final score.
+
+Since the target is a number, this is a regression problem.
+
+### Reflection
+
+Today made machine learning feel more connected to my real life as a tutor.
+
+I now understand better that features are the information given to the model, while the target is the answer the model is trying to predict.
+
+This task helped me see how student learning data can be prepared before training a model.
+
+### Evidence
+
+I saved my work as `week-06-day-05-tutoring-score-prediction-prep.ipynb`.
