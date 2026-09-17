@@ -1494,3 +1494,266 @@ This task helped me see how student learning data can be prepared before trainin
 ### Evidence
 
 I saved my work as `week-06-day-05-tutoring-score-prediction-prep.ipynb`.
+
+
+## Day 43 — August 19, 2026
+
+### What I Learnt Today
+
+Today, I started Week 7, which focuses on classical machine-learning models.
+
+I learnt the basic meaning of five important machine-learning models: linear regression, logistic regression, decision tree, random forest, and K-nearest neighbours.
+
+### What I Practised
+
+- understanding linear regression
+- understanding logistic regression
+- understanding decision trees
+- understanding random forests
+- understanding K-nearest neighbours
+- writing machine-learning concepts in my own words
+- connecting each model to a simple real-life meaning
+
+### What I Built
+
+I created a Markdown notebook titled `Classical ML Model Introduction`.
+
+In the notebook, I wrote short explanations for:
+
+- Linear Regression
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- K-Nearest Neighbours
+
+### Key Understanding
+
+I learnt that different machine-learning models learn patterns in different ways.
+
+Linear regression predicts a number using a straight-line pattern.
+
+Logistic regression predicts a category such as yes/no, pass/fail, or true/false.
+
+A decision tree makes predictions by asking questions step by step.
+
+A random forest uses many decision trees together to make stronger decisions.
+
+K-nearest neighbours predicts by looking at the closest or most similar examples.
+
+### Reflection
+
+Today helped me understand classical machine-learning models in a less abstract way.
+
+Instead of seeing the model names as scary or confusing, I now understand their simple purpose.
+
+The most important thing I learnt today is that machine-learning models are different methods for learning patterns from data and making predictions.
+
+### Evidence
+
+I saved my work as `week-07-day-01-classical-ml-models-introduction.ipynb`.
+## Day 44 — August 20, 2026
+
+### What I Learnt Today
+
+Today, I trained and used my first actual machine-learning model using Linear Regression.
+
+I started with a simple dataset containing `study_hours` and `score`.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- separating the data into `X` and `y`
+- installing and using `scikit-learn`
+- importing `LinearRegression`
+- creating a machine-learning model
+- training the model with `.fit()`
+- giving the model new data
+- making a prediction with `.predict()`
+
+### Key Concepts
+
+`X` represents the input or feature given to the model.
+
+`y` represents the target or answer the model is trying to learn.
+
+`scikit-learn` is a Python library that provides tools for building machine-learning models.
+
+`Linear Regression` is used to predict a numerical value by learning a relationship between variables.
+
+### What I Built
+
+I created a Linear Regression model using:
+
+```python
+model = LinearRegression()
+
+
+## Day 45 — August 21, 2026
+
+### What I Learnt Today
+
+Today, I practised Linear Regression through five different exercises.
+
+My main goal was to repeat the full machine-learning workflow until it started becoming more familiar.
+
+### What I Practised
+
+For each exercise, I practised:
+
+- creating a small dataset
+- identifying the feature as `X`
+- identifying the target as `y`
+- creating a Linear Regression model
+- training the model with `.fit()`
+- creating new unseen input data
+- making a prediction with `.predict()`
+- explaining what the prediction means
+
+### Exercises I Completed
+
+I practised Linear Regression using:
+
+- study hours → score
+- hours worked → income
+- advertising spend → sales
+- practice hours → test score
+- house size → house price
+
+### Key Understanding
+
+Today helped me understand the Linear Regression workflow more clearly:
+
+`X` = the clue/input
+
+`y` = the answer/target
+
+`model = LinearRegression()` = create the model
+
+`model.fit(X, y)` = let the model learn the relationship from past examples
+
+`model.predict(new_data)` = ask the trained model to estimate an answer for new data
+
+### Reflection
+
+The repetition helped Linear Regression feel less vague.
+
+I am beginning to understand that the model learns a numerical relationship from the data and then uses that learned relationship to make predictions for values it has not been directly given before.
+
+The main sequence I want to remember is:
+
+**Create data → separate X and y → create model → fit → give new data → predict.**
+
+### Evidence
+
+I saved my work as `week-07-day-03-linear-regression-practice.ipynb`.
+## Day 46 — August 22, 2026
+
+### What I Learnt Today
+
+Today, I completed a small Linear Regression mini-project.
+
+The goal was to use past student data to train a model and then predict the final score of a new student.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- identifying `X` and `y`
+- creating a Linear Regression model
+- training the model with `.fit()`
+- creating new unseen data
+- making a prediction with `.predict()`
+- interpreting the prediction in simple language
+
+### What I Built
+
+I created a dataset containing:
+
+- `study_hours`
+- `final_score`
+
+I used:
+
+- `X = study_hours`
+- `y = final_score`
+
+I then created the model using:
+
+```python
+model = LinearRegression()
+## Day 47 — August 23, 2026
+
+### What I Learnt Today
+
+Today, I applied Linear Regression to a more realistic tutoring example using multiple features.
+
+Instead of using only one clue to make a prediction, I used three different features together to predict a student’s final score.
+
+### What I Practised
+
+- creating a pandas DataFrame
+- working with multiple feature columns
+- identifying `X` and `y`
+- creating a Linear Regression model
+- training the model with `.fit()`
+- creating new student data
+- making a prediction with `.predict()`
+- interpreting a multiple-feature prediction
+
+### What I Built
+
+I created a tutoring dataset containing:
+
+- `study_hours`
+- `attendance`
+- `homework_score`
+- `final_score`
+
+I used:
+
+- `study_hours`
+- `attendance`
+- `homework_score`
+
+as the features.
+
+I used:
+
+- `final_score`
+
+as the target.
+
+### Key Understanding
+
+Today I learnt the idea of multiple linear regression.
+
+Before, I used one feature to predict one target.
+
+Today, I used several features together to predict one target.
+
+The model combined information about study hours, attendance, and homework performance to estimate the student’s final score.
+
+### Prediction
+
+I created a new student with:
+
+- 5 study hours
+- 88 attendance
+- 80 homework score
+
+The model predicted a final score of approximately:
+
+`78.8`
+
+### Reflection
+
+Today helped me understand that a machine-learning model can use several clues at the same time.
+
+This feels more realistic because real predictions are often based on more than one factor.
+
+The main idea I want to remember is:
+
+**Multiple features can work together to predict one target.**
+
+### Evidence
+
+I saved my work as `week-07-day-05-multiple-linear-regression-tutoring.ipynb`.
