@@ -233,3 +233,45 @@ This week helped me understand the first real structure of machine learning.
 Before training a model, I must prepare the data properly by identifying the features and the target.
 
 This made machine learning feel less abstract and more practical.
+
+## Week 7: Classical Machine Learning Models
+
+### Focus
+
+This week, I moved from machine-learning foundations into my first classical machine-learning model.
+
+I focused mainly on Linear Regression and learnt how a model can learn relationships from data and make predictions on new examples.
+
+### What I Learnt
+
+This week, I learnt about several classical machine-learning models:
+
+- Linear Regression
+- Logistic Regression
+- Decision Trees
+- Random Forests
+- K-Nearest Neighbours
+
+I also learnt that:
+
+- Linear Regression predicts numerical values.
+- Logistic Regression predicts categories.
+- Decision Trees make predictions through a sequence of questions.
+- Random Forests combine many decision trees.
+- K-Nearest Neighbours makes predictions using similar examples.
+
+### Linear Regression Practice
+
+I spent most of the week practising Linear Regression.
+
+I learnt the complete workflow:
+
+`Data → DataFrame → X and y → create model → fit model → new data → prediction`
+
+I used:
+
+```python
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(X, y)
