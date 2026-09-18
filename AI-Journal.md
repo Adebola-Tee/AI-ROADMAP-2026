@@ -1443,6 +1443,7 @@ This project also helped me see that machine learning starts with preparing the 
 ### Evidence
 
 I saved my work as `week-06-day-04-student-performance-prep.ipynb`.
+
 ## Day 40 — August 16, 2026
 
 ### What I Learnt Today
@@ -1494,7 +1495,6 @@ This task helped me see how student learning data can be prepared before trainin
 ### Evidence
 
 I saved my work as `week-06-day-05-tutoring-score-prediction-prep.ipynb`.
-
 
 ## Day 43 — August 19, 2026
 
@@ -1551,6 +1551,7 @@ The most important thing I learnt today is that machine-learning models are diff
 ### Evidence
 
 I saved my work as `week-07-day-01-classical-ml-models-introduction.ipynb`.
+
 ## Day 44 — August 20, 2026
 
 ### What I Learnt Today
@@ -1584,7 +1585,7 @@ I started with a simple dataset containing `study_hours` and `score`.
 
 I created a Linear Regression model using:
 
-```python
+````python
 model = LinearRegression()
 
 
@@ -1757,3 +1758,208 @@ The main idea I want to remember is:
 ### Evidence
 
 I saved my work as `week-07-day-05-multiple-linear-regression-tutoring.ipynb`.
+
+# Day 50 — Model Evaluation + Classical ML Recap
+
+## Classical ML Models Recap
+
+### Linear Regression
+Predicts a number by learning a numerical relationship.
+
+Example:
+Study hours → final score
+
+Memory line:
+**Linear Regression = predict a number.**
+
+### Logistic Regression
+Predicts a category.
+
+Examples:
+Pass / Fail
+Yes / No
+Spam / Not Spam
+
+Memory line:
+**Logistic Regression = predict a category.**
+
+### Decision Tree
+Makes predictions by asking a sequence of questions.
+
+Example:
+
+Did the student attend regularly?
+→ Yes
+
+Did the student complete homework?
+→ Yes
+
+Prediction:
+→ Pass
+
+Memory line:
+**Decision Tree = ask questions step by step.**
+
+### Random Forest
+Uses many decision trees instead of trusting only one tree.
+
+Each tree gives an answer, then the forest combines their answers.
+
+Memory line:
+**Random Forest = many decision trees working together.**
+
+### K-Nearest Neighbours (KNN)
+Looks for past examples that are most similar to the new example.
+
+Example:
+
+A new student studies 5 hours and has 85% attendance.
+
+KNN looks for previous students with similar study hours and attendance, then uses their outcomes to help make the prediction.
+
+Memory line:
+**KNN = look at the closest similar examples.**
+
+---
+
+# Model Evaluation
+
+After building a model, the next question is:
+
+**How good is the model?**
+
+## Accuracy
+
+Accuracy asks:
+
+**Out of everything the model predicted, how many predictions were correct?**
+
+Example:
+
+10 predictions
+8 correct
+
+Accuracy = 80%
+
+Memory line:
+**Accuracy = overall correctness.**
+
+## Precision
+
+Precision asks:
+
+**When the model says YES, how often is it actually right?**
+
+Example:
+
+The model predicts that 5 students will pass.
+
+Only 4 actually pass.
+
+Precision looks at those 5 predictions and asks how many were correct.
+
+Memory line:
+**Precision = Can I trust the model when it says YES?**
+
+## Recall
+
+Recall asks:
+
+**Out of all the real YES cases, how many did the model successfully find?**
+
+Example:
+
+6 students actually passed.
+
+The model correctly identified only 4 of them.
+
+Recall asks how many of the real passes were found.
+
+Memory line:
+**Recall = How many real YES cases did I catch?**
+
+## F1 Score
+
+F1 score balances precision and recall.
+
+It is useful when I care about both:
+
+- not making too many false positive predictions
+- not missing too many real positive cases
+
+Memory line:
+**F1 = balance between precision and recall.**
+
+## Confusion Matrix
+
+A confusion matrix shows the model's correct predictions and mistakes.
+
+It contains:
+
+- True Positive — predicted YES and it really was YES
+- True Negative — predicted NO and it really was NO
+- False Positive — predicted YES but it was actually NO
+- False Negative — predicted NO but it was actually YES
+
+Memory line:
+**Confusion matrix = the model's detailed report card.**
+
+## Day 51 — August 27, 2026
+
+### What I Learnt Today
+
+Today, I practised model evaluation and finally understood how a confusion matrix works.
+
+I learnt that model evaluation helps me judge whether a model’s predictions are actually reliable.
+
+### What I Practised
+
+- importing evaluation tools from `sklearn.metrics`
+- calculating accuracy
+- calculating precision
+- calculating recall
+- calculating F1 score
+- creating a confusion matrix
+- comparing actual results with predicted results
+- understanding True Positive, True Negative, False Positive, and False Negative
+
+### Key Understanding
+
+I learnt that `sklearn` is a machine-learning library, and `metrics` is one of its modules.
+
+From `sklearn.metrics`, I can import functions such as:
+
+```python
+accuracy_score
+precision_score
+recall_score
+f1_score
+confusion_matrix
+
+## Day 52 — August 28, 2026
+
+### What I Learnt Today
+
+Today, I practised model evaluation using actual and predicted classification results.
+
+I focused on understanding how accuracy, precision, recall, F1 score, and the confusion matrix are calculated from the same prediction results.
+
+### What I Practised
+
+- comparing actual and predicted values
+- calculating accuracy
+- calculating precision
+- calculating recall
+- calculating F1 score
+- creating a confusion matrix
+- identifying TN, FP, FN, and TP
+- interpreting the confusion matrix instead of only running the code
+
+### Key Understanding
+
+I now understand that the confusion matrix is arranged as:
+
+```text
+[[TN, FP],
+ [FN, TP]]
+````
