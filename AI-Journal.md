@@ -1963,3 +1963,309 @@ I now understand that the confusion matrix is arranged as:
 [[TN, FP],
  [FN, TP]]
 ````
+
+## Day 53 — August 29, 2026
+
+### What I Learnt Today
+
+Today, I completed a mini-project on classification model evaluation.
+
+I worked with actual and predicted student Pass/Fail results and used different evaluation metrics to judge how well the model performed.
+
+### What I Practised
+
+- using `accuracy_score`
+- using `precision_score`
+- using `recall_score`
+- using `f1_score`
+- creating a confusion matrix
+- interpreting TN, FP, FN, and TP
+- explaining what the evaluation results mean
+
+### My Results
+
+The model produced:
+
+- Accuracy = 0.70
+- Precision = 0.80
+- Recall = 0.67
+- F1 Score = 0.73
+
+The confusion matrix was:
+
+````text
+[[3, 1],
+ [2, 4]]
+
+
+
+ ## Day 54 — August 30, 2026
+
+### What I Learnt Today
+
+Today, I applied model evaluation to a tutoring context.
+
+I evaluated a model that tries to identify students who are at risk of failing.
+
+### What I Practised
+
+- using actual and predicted results
+- calculating accuracy
+- calculating precision
+- calculating recall
+- calculating F1 score
+- creating and interpreting a confusion matrix
+- connecting evaluation metrics to a real tutoring situation
+
+### My Results
+
+The model produced:
+
+- Accuracy = 0.70
+- Precision = 0.75
+- Recall = 0.60
+- F1 Score = 0.67
+
+The confusion matrix was:
+
+```text
+[[4, 1],
+ [2, 3]]
+ ## Day 57 — September 2, 2026
+
+### What I Learnt Today
+
+Today, I started Week 9 and learnt the basic idea of feature engineering.
+
+I learnt that feature engineering is about preparing raw data so that a machine-learning model can learn from it properly.
+
+### Main Concepts
+
+#### Missing Values
+
+Missing values are pieces of information that are absent from a dataset even though they are supposed to be there.
+
+They may need to be removed or filled before training a model.
+
+#### Scaling
+
+Scaling means putting numerical features onto a more comparable scale.
+
+This is useful when one feature has very small values and another has very large values.
+
+#### Encoding
+
+Encoding means converting categorical or text-based features into a numerical form that a machine-learning model can use.
+
+#### Pipeline
+
+A pipeline is an organised chain of data-preparation steps and model training.
+
+It helps make the machine-learning workflow cleaner and more consistent.
+
+### Key Understanding
+
+The main idea I learnt today is:
+
+**Feature engineering = preparing raw data before giving it to a machine-learning model.**
+
+The simple flow is:
+
+Raw data
+→ handle missing values
+→ encode categories
+→ scale numerical features
+→ train model
+
+### Memory Shortcut
+
+- Missing values → handle blanks
+- Scaling → make numbers comparable
+- Encoding → convert categories to numbers
+- Pipeline → connect preparation steps together
+
+### Reflection
+
+Today helped me understand why machine-learning models cannot always use raw real-world data directly.
+
+Before training a model, I may need to clean and transform the features so that the model can understand them properly.
+
+This week will teach me how to do that preparation in practice.
+
+### Evidence
+
+I saved my work as `week-09-day-01-feature-engineering-introduction.ipynb`.
+````
+## Day 58 — September 3, 2026
+
+### What I Learnt Today
+
+Today, I practised handling missing values in a dataset.
+
+I learnt that missing values are common in real-world data and that they do not automatically make the whole dataset useless.
+
+### What I Practised
+
+- detecting missing values
+- counting missing values
+- removing rows with missing values
+- filling missing values
+- using the mean to replace missing numerical values
+- checking the dataset again after cleaning
+
+### New Methods I Learnt
+
+`isnull()`  
+Shows where values are missing.
+
+`isnull().sum()`  
+Counts the number of missing values in each column.
+
+`dropna()`  
+Removes rows that contain missing values.
+
+`fillna()`  
+Fills missing values with another value.
+
+`mean()`  
+Calculates the average of a numerical column.
+
+### Key Understanding
+
+One common way to handle a missing numerical value is to replace it with the average of the existing values in that column.
+
+For example:
+
+```python
+df["study_hours"] = df["study_hours"].fillna(df["study_hours"].mean())
+## Day 59 — September 4, 2026
+
+### What I Learnt Today
+
+Today, I practised different ways of handling missing values.
+
+I went beyond simply using the mean and learnt that the best method depends on the type and shape of the data.
+
+### What I Practised
+
+- finding missing values with `isnull()`
+- counting them with `isnull().sum()`
+- filling numerical missing values
+- using mean
+- using median
+- using mode for categorical data
+- removing incomplete rows with `dropna()`
+- comparing deletion with filling missing values
+
+### Mean, Median and Mode
+
+I learnt that:
+
+`mean()` gives the average.
+
+`median()` gives the middle value and can be useful when extreme values affect the average.
+
+`mode()` gives the most common value.
+
+For categorical data, I used:
+
+```python
+subject_df["subject"].mode()[0]
+## Day 60 — September 5, 2026
+
+### What I Learnt Today
+
+Today, I completed a mini-project on cleaning a messy student dataset and preparing it for machine learning.
+
+I worked with a dataset that contained missing values in both numerical and categorical columns.
+
+### What I Practised
+
+- creating a messy dataset with missing values
+- making a copy of the original dataset before cleaning
+- filling missing numerical values
+- using the mean for some columns
+- using the median for score
+- using the mode for categorical data
+- checking that no missing values remained
+
+### Methods I Used
+
+For `study_hours`, I used the mean.
+
+For `attendance`, I also used the mean.
+
+For `subject`, I used the mode because it is categorical data.
+
+For `score`, I used the median.
+
+### Key Understanding
+
+I learnt that different types of missing values may require different solutions.
+
+Numerical values can sometimes be filled with the mean or median.
+
+Categorical values can often be filled using the mode.
+
+I also learnt that it is useful to make a copy of the dataset before cleaning so the original data remains unchanged.
+
+### Final Check
+
+After cleaning the dataset, I used:
+
+```python
+clean_df.isnull().sum()
+## Day 61 — September 6, 2026
+
+### What I Learnt Today
+
+Today, I applied feature engineering to a tutoring dataset.
+
+I worked with imaginary student data containing missing values and cleaned the dataset using different methods depending on the type of data.
+
+### What I Practised
+
+- creating a copy of the original dataset before cleaning
+- identifying missing values
+- filling numerical missing values with the mean
+- filling numerical missing values with the median
+- filling categorical missing values with the mode
+- preserving useful student data instead of deleting rows unnecessarily
+
+### Methods I Used
+
+For `study_hours`, I used the mean.
+
+For `attendance`, I also used the mean.
+
+For `subject`, I used the mode because it is categorical data.
+
+For `homework_score`, I used the median.
+
+For `final_score`, I also used the median.
+
+### Key Understanding
+
+Today helped me understand that feature engineering is about making sensible decisions, not just applying the same method everywhere.
+
+I learnt that:
+
+- mean can be useful for numerical data
+- median can be useful when I want a middle value that is less affected by unusual values
+- mode is useful for categorical data
+
+I also understood why keeping a copy of the original DataFrame is useful before making changes.
+
+### Reflection
+
+This practice made data cleaning feel more realistic because I applied it to tutoring data.
+
+I now understand that the goal is to preserve useful information while making the dataset complete enough for machine-learning use.
+
+The main idea I want to remember is:
+
+**Choose the cleaning method based on the type of data and what makes sense for the problem.**
+
+### Evidence
+
+I saved my work as `week-09-day-05-tutoring-feature-engineering.ipynb`.
