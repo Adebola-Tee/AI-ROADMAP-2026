@@ -2096,6 +2096,7 @@ This week will teach me how to do that preparation in practice.
 
 I saved my work as `week-09-day-01-feature-engineering-introduction.ipynb`.
 ````
+
 ## Day 58 — September 3, 2026
 
 ### What I Learnt Today
@@ -2136,7 +2137,7 @@ One common way to handle a missing numerical value is to replace it with the ave
 
 For example:
 
-```python
+````python
 df["study_hours"] = df["study_hours"].fillna(df["study_hours"].mean())
 ## Day 59 — September 4, 2026
 
@@ -2269,3 +2270,1214 @@ The main idea I want to remember is:
 ### Evidence
 
 I saved my work as `week-09-day-05-tutoring-feature-engineering.ipynb`.
+
+## Day 64 — September 9, 2026
+
+### What I Worked On
+
+Today, I started my first full machine learning project:
+
+**Student Final Score Prediction Project**
+
+The goal of the project was to predict a student's final score using information such as:
+
+- study hours
+- attendance
+- homework score
+- previous test score
+- tutoring sessions
+- sleep hours
+
+### What I Practised
+
+I combined several things I had learnt from previous weeks into one project.
+
+I:
+
+- loaded a CSV dataset using `pd.read_csv()`
+- inspected the dataset
+- checked for missing values
+- cleaned the missing values
+- selected features and a target
+- split the data into training and testing data
+- created a Linear Regression model
+- trained the model using `.fit()`
+- made predictions using `.predict()`
+- compared predicted scores with actual scores
+- evaluated the model using MAE and R²
+
+### Features and Target
+
+The features were stored in `X`.
+
+The target was stored in `y`.
+
+My target was:
+
+`final_score`
+
+I now understand the memory line:
+
+**X = clues**
+
+**y = answer**
+
+### Train and Test Split
+
+One of the biggest things I learnt today was how training and testing data work.
+
+The 500 rows were split into:
+
+- 400 rows for training
+- 100 rows for testing
+
+The model studied the training data but did not study the testing data.
+
+This made the testing data useful for checking whether the model had actually learnt a pattern.
+
+My memory line is:
+
+**Training data = revision material**
+
+**Testing data = exam material**
+
+### Training the Model
+
+I used Linear Regression because I was predicting a numerical value.
+
+I created the model using:
+
+`LinearRegression()`
+
+Then I trained it using:
+
+`model.fit(X_train, y_train)`
+
+I now understand that `.fit()` means the model is learning the relationship between the features and the target.
+
+### Prediction
+
+I used:
+
+`model.predict(X_test)`
+
+This allowed the model to predict the final scores for the students it had not trained on.
+
+I compared:
+
+- actual scores
+- predicted scores
+
+This made the project feel much more real because I could see where the model was close and where it made mistakes.
+
+### Model Evaluation
+
+I evaluated the model using:
+
+- Mean Absolute Error
+- R-squared
+
+My result was approximately:
+
+**MAE = 4.07**
+
+This means that, on average, the model's prediction was about 4 score points away from the student's real score.
+
+My R² score was approximately:
+
+**R² = 0.73**
+
+This means the model was able to explain a meaningful amount of the pattern in the final scores.
+
+### Important Understanding
+
+Today helped me understand the full machine learning flow much better:
+
+Raw data
+→ inspect
+→ clean
+→ choose features and target
+→ split the data
+→ train the model
+→ predict
+→ compare with reality
+→ evaluate the model
+
+### Reflection
+
+This project made me realise that I am genuinely beginning to enjoy machine learning.
+
+Earlier, some of the concepts felt disconnected because I learnt them separately.
+
+Now that I am using them together in one project, they are starting to make much more sense.
+
+I found myself becoming more interested in the process, especially when I saw the model making predictions and comparing them with real scores.
+
+This project made machine learning feel less like random code and more like solving a real problem.
+
+The main idea I want to remember is:
+
+**A machine learning project is a complete process, not just training a model.**
+
+I am beginning to see how the different things I have learnt connect together.
+## Day 65 — September 10, 2026
+
+### What I Did Today
+
+Today, I rebuilt my machine learning project almost entirely by myself.
+
+I started from loading the CSV file and worked through the full process until model evaluation.
+
+### What I Practised
+
+I practised the full machine learning workflow:
+
+- importing pandas
+- loading the CSV dataset
+- inspecting the data
+- checking for missing values
+- cleaning the dataset
+- selecting features and target
+- splitting the data into training and testing sets
+- importing Linear Regression
+- creating the model
+- training the model using `.fit()`
+- making predictions using `.predict()`
+- comparing actual and predicted values
+- evaluating the model using MAE and R²
+
+### What I Remembered
+
+I was able to remember that:
+
+**X = features/clues**
+
+**y = target/answer**
+
+I also remembered the purpose of:
+
+- `train_test_split()`
+- `LinearRegression()`
+- `.fit()`
+- `.predict()`
+- `mean_absolute_error()`
+- `r2_score()`
+
+### Key Understanding
+
+Today was important because I did not just follow instructions.
+
+I was able to rebuild the process myself.
+
+This helped me see that the machine learning workflow is starting to stay in my memory.
+
+The sequence I want to remember is:
+
+Raw data
+→ inspect
+→ clean
+→ choose X and y
+→ split
+→ train
+→ predict
+→ evaluate
+
+### Reflection
+
+Today gave me more confidence.
+
+Yesterday, I needed much more guidance.
+
+Today, I was able to start from CSV loading and continue all the way to model evaluation by myself.
+
+This showed me that repetition is helping the concepts become more natural.
+
+I am beginning to understand machine learning as a process instead of seeing it as separate pieces of code.
+
+The main idea I want to remember is:
+
+**Understanding grows when I rebuild the process myself instead of only following along.**
+
+### Evidence
+
+I completed:
+
+`week-10-day-02-ml-project-code-along.ipynb`
+## Day 66 — September 11, 2026
+
+### What I Did Today
+
+Today, I practised the full machine learning workflow again using my student final score prediction project.
+
+I worked through the process from loading the CSV file to evaluating the Linear Regression model.
+
+### What I Practised
+
+I practised:
+
+- loading the CSV file
+- inspecting the dataset
+- checking the shape
+- checking for missing values
+- cleaning missing values
+- choosing features and target
+- splitting the data into training and testing sets
+- creating a Linear Regression model
+- training the model
+- making predictions
+- comparing actual and predicted scores
+- evaluating the model using MAE and R²
+
+### Mistake I Made
+
+I initially forgot to clean the missing values before training the model.
+
+I went ahead and tried:
+
+`model.fit(X_train, y_train)`
+
+but an error appeared because the model could not train properly with missing values in the features.
+
+### Correction
+
+I went back and cleaned the missing values first.
+
+After cleaning the dataset, I checked again using:
+
+`df.isnull().sum()`
+
+and confirmed that the missing values were gone.
+
+Then I trained the model again and it worked.
+
+### What I Learnt From the Mistake
+
+This mistake helped me understand why the order of the machine learning workflow matters.
+
+I now understand that I should not jump directly into model training.
+
+The correct flow is:
+
+Load data
+→ inspect data
+→ check missing values
+→ clean data
+→ choose X and y
+→ split data
+→ train model
+→ predict
+→ evaluate
+
+The main lesson is:
+
+**Clean the data before training the model.**
+
+### Train and Test Split
+
+Today, I used:
+
+`test_size = 0.4`
+
+This means:
+
+- 60% of the data was used for training
+- 40% of the data was used for testing
+
+Since the dataset contained 500 rows, the test set contained 200 rows.
+
+### Model Evaluation
+
+My Mean Absolute Error was approximately:
+
+**MAE = 4.27**
+
+This means the predictions were about 4.27 score points away from the real scores on average.
+
+My R² score was approximately:
+
+**R² = 0.735**
+
+This showed that the model still learnt a useful pattern from the data.
+
+### Reflection
+
+Today was useful because I made a real mistake and corrected it myself.
+
+The error helped me understand the importance of data cleaning much better than simply reading about it.
+
+I am becoming more comfortable with the full machine learning workflow and I am beginning to notice when something is missing from the process.
+
+The main idea I want to remember is:
+
+**Errors are useful when I understand why they happened and know how to correct them.**
+
+### Evidence
+
+I completed:
+
+`week-10-day-03-ml-project-practice.ipynb`
+## Day 67 — September 12, 2026
+
+### What I Did Today
+
+Today, I completed a mini machine learning task using the same student dataset, but I changed the prediction target.
+
+Instead of predicting `final_score`, I tried to predict:
+
+`homework_score`
+
+### What I Changed
+
+I used these as features:
+
+- study_hours
+- attendance
+- previous_test_score
+- tutoring_sessions
+- sleep_hours
+
+My target was:
+
+`homework_score`
+
+I did not use `final_score` in this model.
+
+### Train and Test Split
+
+I experimented with:
+
+`test_size = 0.5`
+
+This meant:
+
+- 50% of the data was used for training
+- 50% was used for testing
+
+### Model Evaluation
+
+My Mean Absolute Error was approximately:
+
+**MAE = 13.88**
+
+This means the model's homework-score predictions were about 14 marks away from the real values on average.
+
+My R² score was approximately:
+
+**R² = -0.035**
+
+At first, I was surprised because I had not seen a negative R² before.
+
+### What I Learnt
+
+A negative R² means the model performed worse than simply predicting the average target value.
+
+This helped me understand that the model was not finding a useful relationship between the selected features and `homework_score`.
+
+The problem was not necessarily that the code was wrong.
+
+The selected features simply did not contain enough useful information to predict the target well.
+
+### Important Discovery
+
+Today helped me understand something very important:
+
+**The features I choose can have a major effect on model performance.**
+
+A machine learning model cannot magically make good predictions if the features do not contain useful information about the target.
+
+I also learnt that changing the target can completely change the quality of the model.
+
+### Key Understanding
+
+Previously, the model predicted `final_score` quite well because the available features had a meaningful relationship with final score.
+
+When I changed the target to `homework_score`, the performance became much worse.
+
+This showed me that feature selection is not just about choosing available columns.
+
+It is about choosing columns that are actually relevant to what I am trying to predict.
+
+### Reflection
+
+This experiment made machine learning feel much more realistic.
+
+I now understand that getting a poor model result can still teach me something valuable.
+
+A bad result can tell me that:
+
+- my features may not be useful enough
+- my target may not be well explained by the available data
+- I may need better or different features
+- I may need a different modelling approach
+
+The main idea I want to remember is:
+
+**Good features help a model learn useful patterns. Weak features lead to weak predictions.**
+
+### Evidence
+
+I completed:
+
+`week-10-day-04-mini-ml-task.ipynb`
+
+
+## Day 68 — September 13, 2026
+
+### What I Did Today
+
+Today, I applied machine learning to a personal tutoring context.
+
+The goal was to predict whether a student needs extra support.
+
+I created a new target called:
+
+`needs_support`
+
+The target had two classes:
+
+- `0` = does not need support
+- `1` = needs support
+
+Because the target was categorical, I used Logistic Regression instead of Linear Regression.
+
+### What I Practised
+
+I practised the full classification workflow:
+
+- loading the dataset
+- cleaning missing values
+- creating a new categorical target
+- choosing features and target
+- splitting data into training and testing sets
+- using Logistic Regression
+- training the model with `.fit()`
+- making predictions with `.predict()`
+- checking class balance
+- evaluating the model with classification metrics
+
+### Classification Metrics
+
+I learnt that classification does not use MAE and R².
+
+Instead, I used:
+
+- accuracy
+- precision
+- recall
+- F1 score
+- confusion matrix
+
+### Confusion Matrix
+
+I learnt the structure:
+
+Actual 0, Predicted 0 = TN
+Actual 0, Predicted 1 = FP
+Actual 1, Predicted 0 = FN
+Actual 1, Predicted 1 = TP
+
+The memory line I want to remember is:
+
+**True or False tells me whether the prediction was correct.**
+
+**Positive or Negative tells me what the model predicted.**
+
+### My Result
+
+My confusion matrix was:
+
+`[[95, 1], [4, 0]]`
+
+This means:
+
+- TN = 95
+- FP = 1
+- FN = 4
+- TP = 0
+
+The model correctly identified 95 students who did not need support.
+
+It wrongly flagged 1 student as needing support.
+
+It missed 4 students who actually needed support.
+
+It correctly identified 0 students who genuinely needed support.
+
+### What I Learnt About Accuracy
+
+My accuracy was:
+
+**0.95**
+
+At first, this looked very good.
+
+But I learnt that accuracy alone can be misleading.
+
+The dataset was heavily imbalanced:
+
+- 481 students were class 0
+- only 19 students were class 1
+
+This means the model saw far more examples of students who did not need support.
+
+A model can therefore predict mostly 0 and still get high accuracy.
+
+This helped me understand why accuracy should not be used alone.
+
+### The Cat and Dog Example
+
+A useful example was:
+
+If I teach someone with 481 examples of cats and only 19 examples of dogs, they will find it much easier to recognise cats than dogs.
+
+The same thing happened with the model.
+
+It had many examples of students who did not need support and very few examples of students who did.
+
+The problem was therefore not just prediction.
+
+The problem was that the model had too few examples of the minority class to learn that class properly.
+
+### What I Learnt About Precision
+
+Precision asks:
+
+**When the model says a student needs support, how often is it correct?**
+
+Formula:
+
+`Precision = TP / (TP + FP)`
+
+My precision was 0 because the model did not correctly identify any positive student.
+
+### What I Learnt About Recall
+
+Recall asks:
+
+**Of all the students who truly needed support, how many did the model catch?**
+
+Formula:
+
+`Recall = TP / (TP + FN)`
+
+My recall was 0 because the model missed every student who actually needed support.
+
+This is especially important in a tutoring context because missing a struggling student could matter more than wrongly flagging a student who is actually okay.
+
+### What I Learnt About F1 Score
+
+F1 score balances precision and recall.
+
+My F1 score was also 0 because both precision and recall were 0.
+
+### Class Imbalance
+
+I learnt a new important concept:
+
+**class imbalance**
+
+This happens when one class has far more examples than another.
+
+In my dataset:
+
+- class 0 was the majority class
+- class 1 was the minority class
+
+I also learnt that there are techniques for dealing with this, such as balancing the classes, but I do not need to rush into that yet.
+
+For now, the important thing is understanding the problem.
+
+### value_counts()
+
+I used:
+
+`y.value_counts()`
+
+to count how many examples belonged to each class.
+
+I now understand that:
+
+- `y.value_counts()` checks the full target
+- `y_train.value_counts()` checks only training targets
+- `y_test.value_counts()` checks only testing targets
+
+### max_iter
+
+I also learnt what:
+
+`max_iter=1000`
+
+means in Logistic Regression.
+
+It gives the model up to 1000 optimisation steps to find a suitable solution.
+
+It does not necessarily mean the model will use all 1000 steps.
+
+I also learnt that this is different from Linear Regression, which normally solves the problem directly and does not require the same type of iterative optimisation.
+
+### Key Understanding
+
+Today helped me understand the difference between regression and classification more clearly.
+
+Regression:
+
+- predicts numbers
+- uses Linear Regression
+- can be evaluated with MAE and R²
+
+Classification:
+
+- predicts categories
+- can use Logistic Regression
+- can be evaluated with accuracy, precision, recall, F1 and confusion matrix
+
+### Reflection
+
+Today took a long time, but it was necessary.
+
+I did not fully understand everything immediately, especially the confusion matrix and class imbalance.
+
+However, I now understand much more than I did before.
+
+The biggest lesson for me was that a model can have high accuracy and still be poor at the real task.
+
+For this project, the model had 95% accuracy but failed to correctly identify even one student who actually needed support.
+
+That made me understand why precision, recall, F1 and confusion matrix are important.
+
+The main idea I want to remember is:
+
+**A good classification model is not just one with high accuracy. It must also perform well on the class that matters.**
+## Day 71 — September 16, 2026
+
+### What I Learnt Today
+
+Today, I started learning the intuition behind neural networks.
+
+At first, the topic looked very abstract because of words like:
+
+- neurons
+- layers
+- activation
+- weights
+- backpropagation
+- gradient descent
+
+But I was able to understand them better by connecting them to simple ideas.
+
+### Neural Network Big Picture
+
+A neural network takes clues as input, processes those clues through layers, and produces an output.
+
+The basic flow is:
+
+Input
+→ Hidden Layer
+→ Output
+
+### Input Layer
+
+The input layer is where the clues enter the network.
+
+This is similar to features in machine learning.
+
+For example:
+
+- study hours
+- attendance
+- homework score
+- previous score
+
+These can all be inputs.
+
+### Neurons
+
+I learnt to think of a neuron as a small decision worker.
+
+A neuron receives information, processes it, and passes a result forward.
+
+### Layers
+
+A layer is a group of neurons.
+
+The main sections I learnt were:
+
+- Input layer
+- Hidden layer
+- Output layer
+
+### Hidden Layer
+
+The hidden layer is where the network combines clues and learns useful patterns.
+
+This is where much of the internal processing happens.
+
+### Output Layer
+
+The output layer is where the network gives its final answer or prediction.
+
+### Weights
+
+Weights represent how important different clues are to the network.
+
+Some clues may influence the prediction more strongly than others.
+
+The memory line I want to remember is:
+
+**Weight = level of importance given to a clue.**
+
+### Activation Function
+
+I learnt that the activation function does not decide which clues are allowed to enter.
+
+Instead, after a neuron receives and combines information, the activation function helps determine how strongly that neuron should respond.
+
+The memory line is:
+
+**Activation = controls how strongly a neuron responds.**
+
+### Backpropagation
+
+After the network makes a prediction, the prediction is compared with the real answer.
+
+If there is an error, backpropagation sends information about that mistake backward through the network.
+
+This helps the network understand which weights contributed to the error.
+
+The memory line is:
+
+**Backpropagation = send information about the mistake backward.**
+
+### Gradient Descent
+
+Gradient descent helps adjust the model's weights in a direction that reduces the error.
+
+The memory line is:
+
+**Gradient descent = gradually adjust the model so the error becomes smaller.**
+
+### The Full Story
+
+The process I want to remember is:
+
+Clues enter
+→ neurons process them
+→ hidden layers combine them
+→ weights represent importance
+→ activation controls the response
+→ output gives a prediction
+→ prediction is compared with reality
+→ backpropagation sends error information backward
+→ gradient descent adjusts the weights
+→ the network tries again
+
+### Reflection
+
+Today made neural networks feel much less frightening.
+
+At first, the terminology looked complicated, but once each term was connected to a simple idea, the whole topic became easier to follow.
+
+I may not fully understand the mathematics yet, but I now understand the story of how a neural network learns.
+
+I am also genuinely enjoying machine learning more as the concepts begin to connect.
+
+The main idea I want to remember is:
+
+**A neural network learns by making predictions, checking its mistakes, and adjusting itself so future predictions can improve.**
+
+### Evidence
+
+I completed:
+
+`week-11-day-01-neural-network-intuition.ipynb`
+````
+
+## Day 72 — September 17, 2026
+
+### What I Learnt Today
+
+Today, I practised the basic calculation inside a neuron.
+
+I used simple student-related inputs such as:
+
+- study hours
+- attendance
+- homework score
+
+Each input had its own weight.
+
+### What I Practised
+
+I learnt that a neuron:
+
+1. receives inputs
+2. multiplies each input by its weight
+3. adds the results together
+4. then passes the result toward an activation function
+
+### Weights
+
+I reinforced my understanding that:
+
+**Weight = the importance given to an input.**
+
+A larger weight means that input has a stronger influence on the neuron's calculation.
+
+### My Calculation
+
+I used:
+
+- study hours = 6
+- attendance = 0.9
+- homework score = 0.8
+
+with different weights.
+
+The neuron combined them and produced a result of:
+
+**3.43**
+
+### Key Understanding
+
+The important pattern is:
+
+Input × Weight
+
+- Input × Weight
+- Input × Weight  
+  = Combined result
+
+Then the activation function decides how strongly the neuron should respond.
+
+### Reflection
+
+Today helped me move from only understanding neural networks conceptually to seeing a small part of the calculation in code.
+
+The main idea I want to remember is:
+
+**A neuron receives inputs, gives them different levels of importance through weights, combines them, and then activation controls the response.**
+
+### Evidence
+
+I completed:
+
+`week-11-day-02-neural-network-code-along.ipynb`
+
+## Day 73 — September 18, 2026
+
+### What I Learnt Today
+
+Today, I practised the internal flow of a simple neuron.
+
+I worked with:
+
+- inputs
+- weights
+- weighted inputs
+- bias
+- activation
+- output
+
+### Inputs
+
+The inputs are the clues or features that are fed into the neuron.
+
+Examples can include:
+
+- study hours
+- attendance
+- homework score
+
+In supervised learning, these can be thought of as independent variables or features.
+
+### Weights
+
+Each input has a weight.
+
+The weight represents how much importance the neuron currently gives to that input.
+
+I learnt that weights are not dependent variables.
+
+They are:
+
+**learnable parameters**
+
+The model adjusts these parameters during training.
+
+### Weighted Inputs
+
+A weighted input is:
+
+`input × weight`
+
+The neuron calculates this for each input.
+
+Then the weighted inputs are added together.
+
+### Bias
+
+I learnt that bias is an extra adjustment added after the weighted inputs are combined.
+
+The basic flow is:
+
+weighted inputs  
+→ add them together  
+→ add bias  
+→ activation
+
+### Activation
+
+The activation function takes the combined value and determines how strongly the neuron should respond.
+
+It transforms the neuron's internal calculation into an output or response.
+
+### Important Discovery
+
+One of the most important things I understood today is that the inputs themselves are the information being given to the network.
+
+The network mainly learns by adjusting internal parameters such as the weights.
+
+This means the training process can be thought of as repeatedly fine-tuning the weights so that the network's predictions improve.
+
+### Full Neuron Flow
+
+Inputs  
+→ multiply by weights  
+→ add weighted inputs  
+→ add bias  
+→ activation  
+→ output
+
+### Reflection
+
+Today helped me understand more clearly what part of the neural network actually changes during learning.
+
+The inputs are the information being supplied.
+
+The weights are learnable parameters that can be adjusted.
+
+The target is the answer the model is trying to learn to predict.
+
+The main idea I want to remember is:
+
+**The network learns by adjusting its internal parameters, especially the weights, so its predictions become better.**
+
+### Evidence
+
+I completed:
+
+`week-11-day-03-neural-network-practice.ipynb`
+
+## Day 74 — September 19, 2026
+
+### What I Did Today
+
+Today, I completed a small neural network mini-task.
+
+I built a simple student readiness neuron using:
+
+- study hours
+- attendance
+- homework score
+
+as inputs.
+
+### What I Practised
+
+I practised:
+
+- choosing inputs
+- assigning weights
+- calculating weighted inputs
+- adding a bias
+- using a simple activation function
+- producing a final output
+- changing weights and bias to observe how the neuron responded differently
+
+### Inputs
+
+The inputs represented the clues given to the neuron.
+
+For this task, I used student-related information such as:
+
+- study hours
+- attendance
+- homework score
+
+### Weights
+
+Each input had a weight representing its importance.
+
+I reinforced my understanding that weights are learnable parameters that can be adjusted.
+
+Changing a weight changes how strongly that input influences the neuron's calculation.
+
+### Bias
+
+I added a bias as an extra adjustment to the weighted sum.
+
+This helped me understand that bias is not another feature.
+
+It is an internal adjustment used by the neuron.
+
+### Activation
+
+I used a simple activation rule to turn the neuron's calculated value into an output.
+
+For this mini-task:
+
+- `1` represented a student who looked ready
+- `0` represented a student who may need more support
+
+### Experiment
+
+I changed some weights and the bias to observe what happened.
+
+This helped me see that the output of a neuron depends strongly on its internal parameters.
+
+A different set of weights can make the same inputs produce a different response.
+
+### Key Understanding
+
+The forward journey through a neuron is:
+
+Inputs  
+→ multiply by weights  
+→ add weighted inputs  
+→ add bias  
+→ activation  
+→ output
+
+### Reflection
+
+Today helped me move from following an example to building a small neuron task myself.
+
+I now understand more clearly that neural networks learn by adjusting internal parameters such as weights and bias.
+
+The main idea I want to remember is:
+
+**The inputs provide the information, while the weights and bias control how the neuron responds to that information.**
+
+### Evidence
+
+I completed:
+
+`week-11-day-04-neuron-mini-task.ipynb`
+
+## Day 75 — September 20, 2026
+
+### What I Did Today
+
+Today, I applied my understanding of a neuron to a personal tutoring context.
+
+I created a simple student support neuron using:
+
+- attendance
+- homework score
+- previous test score
+
+as the inputs.
+
+### Inputs
+
+I used:
+
+- attendance = 0.82
+- homework score = 0.74
+- previous test score = 0.68
+
+These were the clues given to the neuron.
+
+### Weights
+
+I assigned different weights to each input:
+
+- attendance weight = 0.4
+- homework weight = 0.35
+- previous test weight = 0.25
+
+This reinforced my understanding that weights represent how important each input is to the neuron.
+
+### Weighted Value
+
+I multiplied each input by its corresponding weight and added the results together.
+
+This produced the neuron's weighted value.
+
+The pattern was:
+
+`input × weight`
+
+for each feature, then add everything together.
+
+### Bias
+
+I used:
+
+`bias = 0.2`
+
+The bias acted as an extra adjustment added to the weighted value.
+
+I then created a combined value using:
+
+weighted value + bias
+
+### Activation Function
+
+I created a simple activation function.
+
+The rule was:
+
+- if the combined value was greater than 0.75, return `1`
+- otherwise, return `0`
+
+I learnt again that the activation function takes the neuron's combined value and converts it into a response.
+
+### Output
+
+My neuron produced:
+
+`1`
+
+For this simple tutoring example, I interpreted:
+
+- `1` = student appears to be doing well enough
+- `0` = student may need more support
+
+### Key Understanding
+
+Today helped me practise the full forward journey through a neuron:
+
+Inputs  
+→ multiply by weights  
+→ add weighted inputs  
+→ add bias  
+→ activation  
+→ output
+
+I also understood more clearly that:
+
+- inputs are the information given to the neuron
+- weights control the importance of those inputs
+- bias provides an extra adjustment
+- activation turns the combined value into a response
+
+### Reflection
+
+Today felt easier because I was able to explain the process out loud before coding it.
+
+I did not just follow the code.
+
+I already knew the order of what I needed to do and only needed help choosing the example values.
+
+This showed me that the neural network concepts are beginning to stay in my memory.
+
+The main idea I want to remember is:
+
+**A neuron takes clues, gives them different levels of importance, adds an adjustment, and then produces a response through activation.**
+
+### Evidence
+
+I completed:
+
+`week-11-day-05-personal-context-neuron.ipynb`
