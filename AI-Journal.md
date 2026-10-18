@@ -3481,3 +3481,910 @@ The main idea I want to remember is:
 I completed:
 
 `week-11-day-05-personal-context-neuron.ipynb`
+
+## Day 78 — September 23, 2026
+
+### What I Learnt Today
+
+Today, I started Week 12: Deep Learning Practice.
+
+The main goal of the week is to build simple neural networks and compare them with classical machine-learning models.
+
+### Classical Machine Learning
+
+I reviewed that classical machine learning includes models such as:
+
+- Linear Regression
+- Logistic Regression
+- Decision Trees
+- Random Forest
+- K-Nearest Neighbours
+
+I already understand that different models are used for different types of prediction problems.
+
+### Deep Learning
+
+I learnt that deep learning is still part of machine learning.
+
+It is not a completely separate field.
+
+Deep learning uses neural networks, usually with multiple hidden layers, to learn more complex patterns.
+
+### Why It Is Called Deep Learning
+
+I learnt that the word “deep” comes from having multiple layers in the neural network.
+
+For example:
+
+Input Layer  
+→ Hidden Layer 1  
+→ Hidden Layer 2  
+→ Hidden Layer 3  
+→ Output Layer
+
+The network can gradually learn more complicated patterns as information passes through the layers.
+
+### Important Understanding
+
+I learnt that deep learning is not automatically better than classical machine learning.
+
+For smaller or simpler structured datasets, classical machine-learning models may work perfectly well.
+
+Deep learning becomes especially useful for more complex problems such as:
+
+- image recognition
+- speech
+- language
+- video
+- very large or complicated datasets
+
+### Connection to Week 11
+
+Week 11 taught me the basic operation of a neuron:
+
+Inputs  
+→ weights  
+→ weighted sum  
+→ bias  
+→ activation  
+→ output
+
+Week 12 is the next step.
+
+Instead of thinking about one simple neuron, I am now learning how many neurons can be connected into layers to form a neural network.
+
+### Key Understanding
+
+The relationship I want to remember is:
+
+Artificial Intelligence  
+→ Machine Learning  
+→ Deep Learning
+
+And:
+
+**Deep learning = machine learning using multi-layer neural networks to learn complex patterns.**
+
+### Reflection
+
+Today helped me understand where deep learning fits into everything I have already learnt.
+
+Before now, deep learning sounded like a completely different topic.
+
+I now understand that it is simply another part of machine learning, built around neural networks with multiple layers.
+
+The main idea I want to remember is:
+
+**Classical machine learning uses models like Linear Regression, Logistic Regression, Decision Trees, Random Forest and KNN, while deep learning uses multi-layer neural networks to learn more complex patterns.**
+
+### Evidence
+
+I completed:
+
+`week-12-day-01-deep-learning-introduction.ipynb`
+
+## Day 79 — September 24, 2026
+
+### What I Did Today
+
+Today, I built and tested my first neural network model for a regression problem.
+
+The goal was to predict a student's final score.
+
+I used:
+
+`MLPRegressor`
+
+which is a neural-network model for predicting numerical values.
+
+### Data Preparation
+
+I loaded the student dataset and removed rows containing missing values using:
+
+`dropna()`
+
+I then selected my features as `X` and the final score as `y`.
+
+After that, I split the data into:
+
+- X_train
+- X_test
+- y_train
+- y_test
+
+### Scaling
+
+I learnt that neural networks usually work better when numerical features are on similar scales.
+
+I used:
+
+`StandardScaler`
+
+The scaler was fitted only on the training data.
+
+The important rule I want to remember is:
+
+**Fit on training data. Transform training and test data.**
+
+This helps prevent data leakage.
+
+### My First Neural Network
+
+I created:
+
+`MLPRegressor`
+
+with one hidden layer containing 10 neurons.
+
+This helped me connect Week 11 to Week 12.
+
+In Week 11, I manually learnt about:
+
+- inputs
+- weights
+- bias
+- activation
+- output
+- backpropagation
+- gradient descent
+
+Today, MLPRegressor handled these internal calculations automatically.
+
+### Convergence Warning
+
+At first, I used:
+
+`max_iter = 1000`
+
+The model produced a convergence warning.
+
+I learnt that this meant the model had reached the maximum number of training iterations before fully settling.
+
+I increased the value to:
+
+`max_iter = 3000`
+
+After doing this, the model performance improved significantly.
+
+### Neural Network Result
+
+After increasing the training iterations, the neural network produced approximately:
+
+**MAE = 8.61**
+
+**R² = 0.086**
+
+The MAE means the neural-network predictions were about 8.6 score points away from the real scores on average.
+
+### Comparing With Linear Regression
+
+I then compared the neural network with Linear Regression using the same cleaned dataset, the same training and test split, and the same test targets.
+
+The Linear Regression model produced approximately:
+
+**MAE = 3.83**
+
+**R² = 0.807**
+
+The neural network produced approximately:
+
+**MAE = 8.61**
+
+**R² = 0.086**
+
+### Important Discovery
+
+Linear Regression performed much better than the neural network on this dataset.
+
+This taught me something very important:
+
+**A more complicated model is not automatically a better model.**
+
+The best model depends on the data and the type of relationship inside the data.
+
+For this structured student dataset, Linear Regression was able to capture the pattern much better.
+
+### Data Leakage Lesson
+
+I also revisited the idea of data leakage.
+
+I now understand that:
+
+- `y_train` is used to teach the model
+- `y_test` is used only after prediction to evaluate the model
+- using `y_test` for evaluation is correct
+- allowing test information to influence preprocessing or training is leakage
+
+The memory line I want to remember is:
+
+**y_train teaches the model. y_test grades the model.**
+
+### Reflection
+
+Today was one of the most useful days because I did not just build a neural network.
+
+I compared it with a classical machine-learning model under the same conditions.
+
+I also saw how training settings such as `max_iter` can affect neural-network performance.
+
+The main lesson I want to remember is:
+
+**Model choice should be based on performance and suitability for the data, not on how advanced the model sounds.**
+
+### Evidence
+
+I completed:
+
+`week-12-day-02-first-neural-network.ipynb`
+
+## Day 80 — September 25, 2026
+
+### What I Did Today
+
+Today, I practised building and comparing different neural network architectures.
+
+I worked with the same student final score dataset and rebuilt the workflow from:
+
+- loading the CSV
+- removing missing values
+- selecting X and y
+- splitting the data
+- scaling the features
+- building the neural network
+- training
+- predicting
+- evaluating
+
+### Data Preparation
+
+I removed rows containing missing values using:
+
+`dropna()`
+
+I selected the student-related features as `X` and used `final_score` as `y`.
+
+I then split the data into:
+
+- X_train
+- X_test
+- y_train
+- y_test
+
+### Scaling
+
+I used `StandardScaler`.
+
+I fitted the scaler only on `X_train`:
+
+`fit_transform(X_train)`
+
+Then I used the same scaling rules on `X_test`:
+
+`transform(X_test)`
+
+This reinforced my understanding of data leakage.
+
+The rule I want to remember is:
+
+**Fit on training data only. Transform both training and test data.**
+
+### Neural Network Architecture
+
+I first worked with:
+
+`hidden_layer_sizes=(10,)`
+
+This means:
+
+- one hidden layer
+- 10 neurons inside that hidden layer
+
+I then tested:
+
+`hidden_layer_sizes=(20, 10)`
+
+This means:
+
+- hidden layer 1 has 20 neurons
+- hidden layer 2 has 10 neurons
+
+### Important Understanding
+
+I learnt that the number of hidden layers and the number of neurons are choices made by the machine learning engineer.
+
+These are hyperparameters.
+
+The model itself learns things such as:
+
+- weights
+- biases
+- internal patterns
+
+But I decide the architecture I want to test.
+
+### Model Results
+
+For the MLP with one hidden layer:
+
+`MLP (10,)`
+
+I got approximately:
+
+- MAE = 8.61
+- R² = 0.086
+
+For the deeper MLP:
+
+`MLP (20, 10)`
+
+I got approximately:
+
+- MAE = 4.20
+- R² = 0.752
+
+This was a major improvement.
+
+### Comparison With Linear Regression
+
+The Linear Regression model had approximately:
+
+- MAE = 3.83
+- R² = 0.807
+
+So the comparison became:
+
+| Model             |  MAE |    R² |
+| ----------------- | ---: | ----: |
+| Linear Regression | 3.83 | 0.807 |
+| MLP (10,)         | 8.61 | 0.086 |
+| MLP (20, 10)      | 4.20 | 0.752 |
+
+### What I Discovered
+
+Changing the neural network architecture had a major effect on performance.
+
+The network with two hidden layers performed much better than the network with only one hidden layer of 10 neurons.
+
+However, Linear Regression still performed slightly better.
+
+This taught me that:
+
+**A more complex model is not automatically the best model.**
+
+The architecture matters, but the final choice should be based on actual performance.
+
+### Jupyter Notebook Mistake
+
+I also made an important Jupyter mistake.
+
+I changed the visible code from:
+
+`hidden_layer_sizes=(10,)`
+
+to:
+
+`hidden_layer_sizes=(20, 10)`
+
+but I did not immediately rerun the model-creation cell.
+
+Because of this, Jupyter was still using the old model stored in memory.
+
+When I checked:
+
+`print(model.hidden_layer_sizes)`
+
+it returned:
+
+`10`
+
+This showed me that Jupyter remembers the last executed code, not simply what is currently written on the screen.
+
+### Correction
+
+I created a new model variable:
+
+`model_20_10`
+
+This made it clear which architecture I was testing.
+
+The main rule I want to remember is:
+
+**Jupyter remembers executed code, not edited code.**
+
+### Reflection
+
+Today helped me understand neural networks much more deeply.
+
+I now understand that I am not just training a model.
+
+I am also making engineering decisions about the model architecture.
+
+I learnt that:
+
+- hidden layer size is a hyperparameter
+- I choose the number of hidden layers and neurons
+- the model learns the weights and biases
+- architecture can strongly affect performance
+- a deeper model is not automatically better
+- model comparison must be based on evidence
+
+The main lesson I want to remember is:
+
+**I choose the architecture. The neural network learns the parameters. Then I evaluate whether my choice actually worked.**
+
+### Evidence
+
+I completed:
+
+`week-12-day-03-deep-learning-practice.ipynb`
+## Day 81 — September 26, 2026
+
+### What I Did Today
+
+Today, I built a neural network classification mini-project.
+
+The goal was to predict whether a student needs support.
+
+I used:
+
+`MLPClassifier`
+
+because this was a classification problem, not a regression problem.
+
+### Target Creation
+
+I created a new target:
+
+`needs_support`
+
+I defined:
+
+- `1` = student scored below 70 and needs support
+- `0` = student scored 70 or above and does not need support
+
+This helped me understand the difference between regression and classification again.
+
+### Features and Target
+
+I used student-related features such as:
+
+- study hours
+- attendance
+- homework score
+- previous test score
+- tutoring sessions
+- sleep hours
+
+I did not use `final_score` as a feature because the target was created from `final_score`.
+
+Using it would have caused target leakage.
+
+### Train Test Split
+
+I split the data into:
+
+- X_train
+- X_test
+- y_train
+- y_test
+
+I also used:
+
+`stratify=y`
+
+This helps keep a similar proportion of 0s and 1s in the training and testing sets.
+
+### Scaling
+
+I used `StandardScaler`.
+
+I fitted only on:
+
+`X_train`
+
+and then transformed:
+
+- X_train
+- X_test
+
+This reinforced my understanding of data leakage.
+
+The rule I want to remember is:
+
+**Fit on training data only. Transform both training and test data.**
+
+### Neural Network Model
+
+I created:
+
+`MLPClassifier`
+
+with:
+
+`hidden_layer_sizes=(20, 10)`
+
+This means:
+
+- first hidden layer = 20 neurons
+- second hidden layer = 10 neurons
+
+I then trained the model using:
+
+`X_train_scaled` and `y_train`
+
+and predicted using:
+
+`X_test_scaled`
+
+### Model Evaluation
+
+Because this was classification, I used:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+My results were approximately:
+
+- Accuracy = 89.0%
+- Precision = 73.7%
+- Recall = 77.8%
+- F1 = 75.7%
+
+### Confusion Matrix
+
+My confusion matrix was:
+
+`[[59, 5], [4, 14]]`
+
+I learnt to read this as:
+
+- TN = 59
+- FP = 5
+- FN = 4
+- TP = 14
+
+In my student-support context:
+
+- TN = 59 students did not need support and the model correctly identified them
+- FP = 5 students did not need support but the model wrongly flagged them
+- FN = 4 students actually needed support but the model missed them
+- TP = 14 students needed support and the model correctly identified them
+
+### Confusion Matrix Memory Trick
+
+The first number is the actual value.
+
+The second number is the predicted value.
+
+So:
+
+- 00 = TN
+- 01 = FP
+- 10 = FN
+- 11 = TP
+
+I also learnt:
+
+**True or False tells me whether the prediction was correct.**
+
+**Positive or Negative tells me what the model predicted.**
+
+### Precision and Recall
+
+Precision asks:
+
+**When the model says a student needs support, how often is it correct?**
+
+Recall asks:
+
+**Of all the students who really need support, how many did the model find?**
+
+The recall memory line that helps me most is:
+
+**Of everyone who really needed me, how many did I find?**
+
+### Mistakes and Corrections
+
+I initially created the target incorrectly using:
+
+`final_score > 70`
+
+I corrected it to:
+
+`final_score < 70`
+
+because below 70 was meant to represent students who need support.
+
+I also initially predicted using the wrong variable name:
+
+`model.predict()`
+
+instead of:
+
+`mlp_model.predict()`
+
+I corrected it and reran the evaluation.
+
+### Important Comparison
+
+I now understand this pairing better:
+
+- LinearRegression → predicts numbers using classical ML
+- MLPRegressor → predicts numbers using a neural network
+- LogisticRegression → predicts categories using classical ML
+- MLPClassifier → predicts categories using a neural network
+
+### Reflection
+
+Today helped me understand classification much better.
+
+The biggest improvement was my understanding of the confusion matrix.
+
+I now understand that accuracy alone is not enough.
+
+A model can have a high accuracy score but still make important mistakes.
+
+For this student-support problem, false negatives are especially important because they represent students who actually need help but the model failed to identify.
+
+My main memory line for today is:
+
+**Regression predicts numbers. Classification predicts categories.**
+
+And for confusion matrix:
+
+**00 = TN, 01 = FP, 10 = FN, 11 = TP.**
+
+### Evidence
+
+I completed:
+
+`week-12-day-04-neural-network-classification-mini-task.ipynb`
+## Day 82 — September 27, 2026
+
+### Week 12 Day 5 — Tutoring Intervention Planner
+
+Today I applied deep learning to a personal tutoring context.
+
+Instead of stopping after predicting a student's final score, I used the prediction to decide what kind of academic support the student may need.
+
+### Project Goal
+
+The goal was to build a neural network that predicts a student's final score and then converts that prediction into a tutoring recommendation.
+
+The possible recommendations were:
+
+- Urgent Support
+- Extra Support
+- Monitor
+- On Track
+
+### Data Preparation
+
+I loaded the student CSV file and removed rows containing missing values using:
+
+`dropna()`
+
+After cleaning, I had 406 rows remaining.
+
+I selected these features:
+
+- study hours
+- attendance
+- homework score
+- previous test score
+- tutoring sessions
+- sleep hours
+
+My target was:
+
+`final_score`
+
+Because final score is a number, this was a regression problem.
+
+### Train Test Split
+
+I split the data into:
+
+- X_train
+- X_test
+- y_train
+- y_test
+
+This reinforced my understanding that the training data teaches the model while the test data is used to evaluate what the model learnt.
+
+### Scaling
+
+I used `StandardScaler`.
+
+I fitted the scaler only on the training features:
+
+`fit_transform(X_train)`
+
+and only transformed the test features:
+
+`transform(X_test)`
+
+This avoids data leakage.
+
+### Neural Network
+
+I used:
+
+`MLPRegressor`
+
+with:
+
+`hidden_layer_sizes=(20, 10)`
+
+This means:
+
+- Hidden Layer 1 = 20 neurons
+- Hidden Layer 2 = 10 neurons
+
+I then trained the model using:
+
+`X_train_scaled` and `y_train`
+
+and made predictions using:
+
+`X_test_scaled`.
+
+### Model Evaluation
+
+I evaluated the model using MAE and R² because this was a regression problem.
+
+My result was approximately:
+
+- MAE = 4.20
+- R² = 0.755
+
+This means the model's predictions were about 4 score points away from the real scores on average.
+
+The R² result also showed that the model was learning a useful relationship from the features.
+
+### Turning Prediction Into Action
+
+Today I learnt something new.
+
+A prediction does not have to be the final product.
+
+I created a tutoring rule that converts a predicted score into an action.
+
+The rules were:
+
+- Below 60 → Urgent Support
+- Below 70 → Extra Support
+- Below 80 → Monitor
+- 80 and above → On Track
+
+This helped me understand the difference between:
+
+**Machine learning prediction**
+
+and
+
+**A real-world decision made using the prediction.**
+
+The neural network predicts the score.
+
+The tutoring rule decides what action should be taken.
+
+### Important Programming Lesson
+
+I initially used several separate `if` statements inside my tutoring function.
+
+I learnt that this can cause more than one condition to run for the same student.
+
+For example, a score of 65 is:
+
+- below 70
+- also below 80
+
+So using separate `if` statements could produce more than one recommendation.
+
+I corrected this by using:
+
+`if`
+
+`elif`
+
+`elif`
+
+`else`
+
+This ensures that only one recommendation is returned.
+
+### Print vs Return
+
+I also learnt an important difference between `print()` and `return`.
+
+`print()` only displays something on the screen.
+
+`return` sends a value back to the program so it can be stored and used elsewhere.
+
+Because I was using `.apply()`, my function needed to `return` the tutoring recommendation instead of only printing it.
+
+### DataFrame Error
+
+I also encountered a syntax error while creating the results DataFrame.
+
+The issue was that I forgot to open the dictionary using `{`.
+
+I corrected the DataFrame structure and successfully created columns for:
+
+- Actual Score
+- Predicted Score
+- Recommended Action
+
+This was another useful debugging lesson.
+
+### Error Analysis
+
+I also learnt that evaluating a model does not have to stop at MAE and R².
+
+I can calculate the absolute error for every student and inspect the cases where the model made its largest mistakes.
+
+This is called error analysis.
+
+It helps answer:
+
+**Which individual predictions did my model get badly wrong?**
+
+### Main Lesson
+
+The biggest lesson today was:
+
+**A prediction is not automatically useful until it is connected to a real decision.**
+
+The neural network predicted student performance, but the tutoring rules transformed those predictions into something that could actually guide intervention.
+
+### Reflection
+
+Today felt more like using machine learning in a real situation rather than simply practising code.
+
+I can now see the workflow more clearly:
+
+Data
+→ clean
+→ features and target
+→ split
+→ scale
+→ build model
+→ train
+→ predict
+→ evaluate
+→ analyse errors
+→ make a useful decision
+
+I am beginning to understand that machine learning engineering is not only about creating models.
+
+It is also about deciding how those predictions should be used responsibly and practically.
+
+### Evidence
+
+Completed:
+
+`week-12-day-05-tutoring-intervention-planner.ipynb`

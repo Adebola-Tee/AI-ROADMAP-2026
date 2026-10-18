@@ -509,3 +509,41 @@ The main idea I want to remember is:
 
 **A neural network learns by adjusting its internal parameters so its predictions improve over time.**
 ```
+# Week 12 — Deep Learning Practice
+
+**Dates:** September 23–29, 2026
+
+## Objective
+
+The goal of this week was to move from neural-network intuition into practical deep-learning work.
+
+I built simple neural networks for both regression and classification problems and compared their performance with classical machine-learning models.
+
+---
+
+## What I Learned
+
+This week helped me connect classical machine learning with neural networks.
+
+For regression problems:
+
+- `LinearRegression` is a classical ML model for predicting numbers.
+- `MLPRegressor` is a neural-network model for predicting numbers.
+
+For classification problems:
+
+- `LogisticRegression` is a classical ML model for predicting categories.
+- `MLPClassifier` is a neural-network model for predicting categories.
+
+One of my main lessons was that a more complex model is not automatically a better model.
+
+---
+
+## Neural Network Architecture
+
+I learnt how `hidden_layer_sizes` controls the architecture of an MLP neural network.
+
+For example:
+
+```python
+hidden_layer_sizes=(10,)
