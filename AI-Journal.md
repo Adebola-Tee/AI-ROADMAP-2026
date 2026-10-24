@@ -4388,3 +4388,1094 @@ It is also about deciding how those predictions should be used responsibly and p
 Completed:
 
 `week-12-day-05-tutoring-intervention-planner.ipynb`
+## Day 85 — September 30, 2026
+
+### Week 13 Day 1 — Computer Vision Basics
+
+Today I started Week 13 and was introduced to the basics of computer vision.
+
+The main objective was to understand:
+
+- images as tensors
+- image classification
+- CNNs
+- transfer learning
+- pretrained models
+- fine-tuning
+
+### Computer Vision
+
+I learnt that computer vision is the use of machine learning to work with visual information such as images.
+
+A computer does not see an image the way a human does.
+
+It sees numbers.
+
+### Pixels
+
+An image is made up of tiny squares called pixels.
+
+Pixel values represent visual information.
+
+For a simple grayscale image:
+
+- 0 represents very dark
+- 255 represents very bright
+
+This means an image can be represented numerically.
+
+### Tensors
+
+I learnt that a tensor is a structure that stores numbers across one or more dimensions.
+
+A simple way I remember it is:
+
+- single number → scalar
+- list of numbers → 1D
+- rows and columns → 2D
+- higher-dimensional numerical structures → tensors with more dimensions
+
+For a colour image, the common structure is:
+
+`height × width × channels`
+
+For example:
+
+`100 × 100 × 3`
+
+means:
+
+- 100 pixels high
+- 100 pixels wide
+- 3 colour channels
+
+### RGB Channels
+
+The three colour channels usually represent:
+
+- Red
+- Green
+- Blue
+
+A colour image is created by combining these channels.
+
+My memory line is:
+
+**An image tensor is a numerical representation of an image.**
+
+### Practical Tensor Exercise
+
+I created a tiny grayscale-style image using NumPy.
+
+Its shape was:
+
+`(3, 3)`
+
+This means:
+
+- 3 rows
+- 3 columns
+
+I also created a colour-image-shaped array with:
+
+`(3, 3, 3)`
+
+This represents:
+
+- height = 3
+- width = 3
+- channels = 3
+
+This helped me physically see how image dimensions are represented in code.
+
+### Image Classification
+
+I learnt that image classification means:
+
+**Looking at an image and deciding which category it belongs to.**
+
+For example:
+
+- cat
+- dog
+
+This connected with classification problems I had already studied.
+
+Previously I classified students into categories.
+
+Now the input can be an image instead.
+
+### Image Classification vs Object Detection
+
+I learnt the difference between the two.
+
+Image classification asks:
+
+**What is in this image?**
+
+Object detection asks:
+
+**What objects are in the image and where are they located?**
+
+This distinction was important because computer vision is broader than just classification.
+
+### CNN
+
+I was introduced to CNN:
+
+`Convolutional Neural Network`
+
+CNNs are neural-network architectures commonly used for computer-vision tasks.
+
+I do not need the mathematical details yet.
+
+The main idea is that a CNN can learn visual patterns such as:
+
+- edges
+- shapes
+- textures
+- more complex visual features
+
+### Connection With Neural Networks
+
+This week connects directly with what I previously learnt about neural networks.
+
+The basic flow is still:
+
+Input
+→ hidden processing
+→ output
+
+But now the input is image data.
+
+So:
+
+Image
+→ pixels
+→ numerical tensor
+→ neural network
+→ learnt visual patterns
+→ prediction
+
+The weights and biases are still learnt during training.
+
+### Transfer Learning
+
+I learnt that transfer learning means reusing knowledge from a model that has already been trained.
+
+Instead of starting from zero, I can use a model that already understands useful visual patterns and adapt it to my own task.
+
+My memory line is:
+
+**Transfer learning means reusing existing knowledge instead of learning everything from scratch.**
+
+### Pretrained Model
+
+A pretrained model is simply a model that has already been trained.
+
+It may already understand many useful visual patterns.
+
+This can save:
+
+- time
+- computing power
+- training data
+
+### Fine-Tuning
+
+I also learnt that fine-tuning is not exactly the same thing as transfer learning.
+
+Transfer learning is the broad idea of reusing a pretrained model.
+
+Fine-tuning means continuing to adjust some of that pretrained model's learned parameters for my own specific task.
+
+### Main Memory Chain
+
+The main flow I want to remember is:
+
+**Image → Pixels → Numbers → Tensor → Neural Network → Pattern → Classification**
+
+And:
+
+**Transfer learning = reuse knowledge instead of starting from zero.**
+
+### Reflection
+
+Computer vision initially sounded like a completely new and complicated field.
+
+After today's lesson, I realised that many of the ideas still connect with what I have already learnt in machine learning and neural networks.
+
+The biggest difference is mainly the type of input.
+
+Before, my features were things such as study hours and attendance.
+
+Now the input can be image pixels represented numerically.
+
+This made computer vision feel much less abstract.
+
+### Evidence
+
+Completed:
+
+`week-13-day-01-computer-vision-basics.ipynb`
+
+## Day 86 — October 1, 2026
+
+### Week 13 Day 2 — Working With Image Tensors
+
+Today I moved from the theory of computer vision into practical image handling with NumPy and Matplotlib.
+
+The main goal was to understand how image data is stored, inspected, manipulated, normalised, and prepared before it is eventually passed into a model.
+
+### Creating a Grayscale Image
+
+I created a small 5 × 5 numerical array using NumPy.
+
+The array contained values such as:
+
+- 0 = dark
+- 255 = bright
+
+This helped me understand that a computer does not initially see an image the way a human does.
+
+It sees numerical values arranged in a tensor.
+
+I then used:
+
+`plt.imshow()`
+
+to display the numerical array visually.
+
+This reinforced the idea that:
+
+**The array and the displayed image contain the same information.**
+
+Humans prefer the visual picture.
+
+The computer works with the numbers.
+
+### Shape, ndim and dtype
+
+I inspected the image using:
+
+- `shape`
+- `ndim`
+- `dtype`
+
+I learnt:
+
+- `shape` tells me the size of each dimension
+- `ndim` tells me how many dimensions the tensor has
+- `dtype` tells me what type of numbers are stored inside
+
+For my grayscale image:
+
+`shape = (5, 5)`
+
+This means:
+
+- 5 pixels high
+- 5 pixels wide
+
+### Inspecting Individual Pixels
+
+I also accessed individual pixels using:
+
+`image[row, column]`
+
+This helped me understand that every location in an image has a numerical value representing that pixel.
+
+### Moving to Colour Images
+
+I created a colour image using:
+
+`np.zeros((4, 4, 3))`
+
+Its shape was:
+
+`(4, 4, 3)`
+
+This means:
+
+- 4 pixels high
+- 4 pixels wide
+- 3 colour channels
+
+The three channels represent:
+
+- Channel 0 = Red
+- Channel 1 = Green
+- Channel 2 = Blue
+
+### RGB Channels
+
+I practised changing the RGB channels separately.
+
+For example:
+
+`colour_image[:, :, 0] = 255`
+
+made the image red.
+
+I also created green and blue images.
+
+This helped me understand that:
+
+**A colour pixel usually contains multiple channel values, not just one number.**
+
+For example:
+
+- `[255, 0, 0]` = red
+- `[0, 255, 0]` = green
+- `[0, 0, 255]` = blue
+- `[255, 255, 255]` = white
+- `[0, 0, 0]` = black
+
+### Extracting One Channel
+
+I extracted one colour channel from the RGB image.
+
+The original colour image had shape:
+
+`(4, 4, 3)`
+
+After selecting one channel, the shape became:
+
+`(4, 4)`
+
+This showed me that selecting only one channel removes the extra RGB dimension.
+
+### Normalisation
+
+I practised normalising pixel values.
+
+Originally, the pixel values were in the range:
+
+`0 to 255`
+
+I divided by 255.0 and changed the scale to:
+
+`0 to 1`
+
+I learnt that normalisation changes the numerical scale, but not the meaning of the image.
+
+This reminded me of scaling in previous machine-learning projects.
+
+The exact method is different, but the broad idea is similar:
+
+**Put numerical inputs into a form that is easier for the model to work with.**
+
+### Batches
+
+I was also introduced to the idea of a batch.
+
+A batch is simply a group of images processed together.
+
+I created two images and stacked them together.
+
+The resulting shape was:
+
+`(2, 4, 4, 3)`
+
+I interpreted this as:
+
+- 2 images
+- 4 pixels high
+- 4 pixels wide
+- 3 colour channels
+
+This helped me understand why image tensors can sometimes have four dimensions.
+
+For one image:
+
+`height × width × channels`
+
+For a batch of images:
+
+`number of images × height × width × channels`
+
+### Important Matplotlib Lesson
+
+When I displayed an extracted channel containing only 255 values, it appeared black at first.
+
+I learnt that this was because Matplotlib automatically scales the displayed values.
+
+To force the expected grayscale meaning, I can use:
+
+`vmin=0, vmax=255`
+
+This helped me understand that how an image is displayed can sometimes differ from the actual values stored in the array.
+
+### Main Understanding
+
+Today I learnt that computer-vision models do not receive magical picture objects.
+
+They receive numerical tensors.
+
+The basic flow is:
+
+**Image → Tensor → Shape → Pixels → Channels → Normalisation → Batch → Model**
+
+### Reflection
+
+Today made image tensors feel much less abstract.
+
+Yesterday I understood the theory of pixels, tensors, RGB channels, and computer vision.
+
+Today I actually manipulated them in code.
+
+The most useful part was seeing how changing individual RGB channels directly changed the displayed image.
+
+I also understood that tensor shape carries important information about the structure of image data.
+
+### Main Memory Lines
+
+**A computer works with numerical image tensors.**
+
+**RGB means Red, Green, Blue.**
+
+**One colour image can be height × width × channels.**
+
+**A batch adds another dimension for the number of images.**
+
+**Normalisation changes the scale, not the visual meaning.**
+
+### Evidence
+
+Completed:
+
+`week-13-day-02-image-tensors-code-along.ipynb`
+## Day 87 — October 2, 2026
+
+### Week 13 Day 3 — Computer Vision Practice
+
+Today I practised the computer-vision concepts from the previous two days.
+
+The main focus was on:
+
+- image tensor shapes
+- dimensions
+- data types
+- RGB channels
+- creating colours using RGB
+- inspecting individual pixels
+- normalisation
+
+### Image Shape
+
+I created an image using:
+
+`np.zeros((8, 6, 3))`
+
+The shape was:
+
+`(8, 6, 3)`
+
+I understood this as:
+
+- 8 pixels high
+- 6 pixels wide
+- 3 colour channels
+
+The three channels are:
+
+- Channel 0 = Red
+- Channel 1 = Green
+- Channel 2 = Blue
+
+This helped reinforce that for an RGB image, the last `3` represents the three colour channels.
+
+### ndim and dtype
+
+I checked:
+
+`image.ndim`
+
+and:
+
+`image.dtype`
+
+I learnt that:
+
+- `ndim` tells me the number of dimensions
+- `dtype` tells me the type of values stored in the array
+
+My image had 3 dimensions because it contained:
+
+height × width × channels
+
+### Understanding RGB Channels Better
+
+I initially became confused when asked to create colours like yellow and cyan.
+
+I realised that I was not expected to magically know colour combinations.
+
+The important thing was understanding how RGB values combine.
+
+I remembered:
+
+- Red = channel 0
+- Green = channel 1
+- Blue = channel 2
+
+For yellow:
+
+`[255, 255, 0]`
+
+This means:
+
+- Red = 255
+- Green = 255
+- Blue = 0
+
+So I created yellow by turning on the red and green channels.
+
+For cyan:
+
+`[0, 255, 255]`
+
+This means:
+
+- Red = 0
+- Green = 255
+- Blue = 255
+
+So cyan was created by turning on the green and blue channels.
+
+### Important Channel Meaning
+
+I also understood more clearly that a channel is simply one component of colour information inside an RGB image.
+
+For example:
+
+`yellow_image[:, :, 0]`
+
+means:
+
+- all rows
+- all columns
+- red channel
+
+The two colons mean all rows and all columns.
+
+The final number selects the colour channel.
+
+### Inspecting a Pixel
+
+I checked:
+
+`yellow_image[0, 0]`
+
+and got:
+
+`[255, 255, 0]`
+
+This showed me directly that one yellow pixel contains:
+
+- full red
+- full green
+- no blue
+
+This made the RGB concept much clearer.
+
+### Normalisation
+
+I normalised the yellow image by dividing its pixel values by 255.
+
+Before normalisation:
+
+`[255, 255, 0]`
+
+After normalisation:
+
+`[1.0, 1.0, 0.0]`
+
+The colour meaning stayed the same.
+
+Only the numerical scale changed.
+
+This reinforced the idea that:
+
+**Normalisation changes the scale of the values, not the visual meaning of the image.**
+
+### Mistakes and Corrections
+
+One important mistake today was that I created:
+
+`normalized_yellow`
+
+but later accidentally referred to an older variable called:
+
+`normalized_image`
+
+Because Jupyter can remember old variables from earlier executions, the code still returned values instead of immediately making the mistake obvious.
+
+I corrected my understanding and reminded myself that variable names must match the actual object I created.
+
+### Reflection
+
+Today was more about slowing down and making sure I truly understood RGB channels rather than rushing through all the exercises.
+
+The biggest improvement was understanding what this means:
+
+`image[:, :, channel]`
+
+I now read it as:
+
+**all rows, all columns, choose this colour channel.**
+
+I also understand that colours such as yellow and cyan are simply combinations of different red, green, and blue values.
+
+### Main Memory Lines
+
+**Channel 0 = Red**
+
+**Channel 1 = Green**
+
+**Channel 2 = Blue**
+
+**RGB image shape = height × width × 3 channels**
+
+**Yellow = Red + Green = [255, 255, 0]**
+
+**Cyan = Green + Blue = [0, 255, 255]**
+
+**Normalisation changes 0–255 into 0–1 without changing the colour meaning.**
+
+### Evidence
+
+Completed practice in:
+
+`week-13-day-03-computer-vision-practice.ipynb`
+## Day 88 — October 3, 2026
+
+### Week 13 Day 4 — Basic Colour Classifier Mini-Project
+
+Today I built a small computer-vision mini-project using the concepts I have been learning about image tensors and RGB channels.
+
+The goal was to create a simple program that could identify whether an image was mainly:
+
+- Red
+- Green
+- Blue
+
+### Creating the Images
+
+I created separate RGB image tensors using NumPy.
+
+For example:
+
+`np.zeros((5, 5, 3))`
+
+means:
+
+- 5 pixels high
+- 5 pixels wide
+- 3 colour channels
+
+I remembered that:
+
+- Channel 0 = Red
+- Channel 1 = Green
+- Channel 2 = Blue
+
+I then turned on the appropriate channel to create red, green and blue images.
+
+### Inspecting One Image Properly
+
+One important lesson today was that when analysing an image, all three colour measurements must come from the **same image**.
+
+For a red image, I needed to check:
+
+- its red channel
+- its green channel
+- its blue channel
+
+I initially calculated each colour from separate images, which gave me 255 for red, green and blue.
+
+I corrected this and understood the rule:
+
+**One image → inspect all three of its channels.**
+
+### Channel Averages
+
+I used `.mean()` to calculate the average strength of each colour channel.
+
+For a red image:
+
+- Red average = 255
+- Green average = 0
+- Blue average = 0
+
+This helped me understand that the classifier could decide the main colour by comparing which channel had the largest average value.
+
+### Building the Classifier
+
+I created a function called:
+
+`classify_colour(image)`
+
+The function:
+
+1. calculates the average red value
+2. calculates the average green value
+3. calculates the average blue value
+4. compares the three values
+5. returns the colour with the strongest channel
+
+The basic logic was:
+
+- If red is strongest → Red
+- If green is strongest → Green
+- Otherwise → Blue
+
+### Testing the Classifier
+
+I tested the function with pure red, green and blue images.
+
+The classifier correctly identified the colours.
+
+I then made the project slightly more realistic by creating an image with values roughly like:
+
+`[220, 40, 30]`
+
+This was not pure red, but red was still clearly the strongest channel.
+
+The classifier correctly returned:
+
+`Red`
+
+This helped me understand that the image does not need to contain a perfect value like `[255, 0, 0]`.
+
+The program is looking for the **dominant colour channel**.
+
+### Creating My Own Test
+
+I also created my own image with approximately:
+
+- Red = 20
+- Green = 10
+- Blue = 230
+
+Before running the classifier, I could already reason that blue should win because 230 was the largest value.
+
+The classifier returned:
+
+`Blue`
+
+This was important because I was no longer only following an example. I was applying the logic myself.
+
+### Analyse Colour Function
+
+I also created an `analyse_colour()` function.
+
+Its purpose was to show:
+
+- average red
+- average green
+- average blue
+- final prediction
+
+I made a small mistake here by initially reading channel `0` for all three averages.
+
+I corrected it to:
+
+- 0 for Red
+- 1 for Green
+- 2 for Blue
+
+This reinforced my memory of RGB channel indexing.
+
+### Rule-Based Classification vs Machine Learning
+
+One of the most important lessons today was understanding what I actually built.
+
+This is a **rule-based classifier**, not yet a machine-learning model.
+
+I manually wrote the rule:
+
+**Whichever colour channel has the highest average becomes the predicted colour.**
+
+A real machine-learning computer-vision model would be different.
+
+Instead of me manually writing the visual rules, the model would learn useful patterns from labelled training examples.
+
+### Why This Project Matters
+
+Although this was a small project, it helped connect several concepts:
+
+Image
+→ numerical tensor
+→ RGB channels
+→ calculate channel averages
+→ compare values
+→ return a category
+
+This gave me a clearer understanding of how numerical image information can eventually lead to classification.
+
+### Main Memory Lines
+
+**One image → inspect all three channels.**
+
+**Channel 0 = Red**
+
+**Channel 1 = Green**
+
+**Channel 2 = Blue**
+
+**`.mean()` tells me the average strength of a channel across the image.**
+
+**The strongest channel determines the category in this simple classifier.**
+
+**Rule-based classifier = I write the rules.**
+
+**Machine learning = the model learns useful rules from data.**
+
+### Reflection
+
+Today helped make computer vision feel more purposeful.
+
+At first, creating coloured squares and working with RGB values felt abstract.
+
+Once I understood that the project was building toward:
+
+**image tensor → numerical analysis → category**
+
+the purpose became much clearer.
+
+I also learnt that these exercises are helping me understand the structure of image data before moving into models that learn visual patterns automatically.
+
+### Evidence
+
+Completed:
+
+`week-13-day-04-basic-colour-classifier.ipynb`
+## Day 89 — October 4, 2026
+
+### Week 13 Day 5 — Applying Computer Vision to Tutoring
+
+Today I applied my computer-vision knowledge to a personal tutoring context by working with a real image of student homework.
+
+The goal was to understand how a real image would be prepared before eventually being passed into a computer-vision model.
+
+### Loading a Real Image
+
+I used PIL:
+
+`from PIL import Image`
+
+I learnt that PIL is used to open and work with image files in Python.
+
+I loaded a real homework image using:
+
+`Image.open()`
+
+I initially had a file-name issue because the image extension was different from what I typed.
+
+This reminded me that Python needs the exact file name and extension.
+
+### Converting the Image to RGB
+
+I converted the image using:
+
+`student_image.convert("RGB")`
+
+This ensured that the image had three predictable colour channels:
+
+- Red
+- Green
+- Blue
+
+### Converting the Image to Numbers
+
+I then converted the image into a NumPy array using:
+
+`np.array(student_image)`
+
+This was an important moment because I could see that what looked like an ordinary homework photograph to me was actually stored by the computer as a very large collection of numbers.
+
+This reinforced the idea:
+
+**Humans see an image.  
+Computers work with numerical values.**
+
+### Understanding the Real Image Shape
+
+My real image had the shape:
+
+`(2000, 1500, 3)`
+
+I interpreted this as:
+
+- 2000 pixels high
+- 1500 pixels wide
+- 3 RGB colour channels
+
+I also checked:
+
+`ndim = 3`
+
+because the image contains:
+
+height × width × channels
+
+The data type was:
+
+`uint8`
+
+which is commonly used for image pixel values from 0 to 255.
+
+### Displaying the Image
+
+I used:
+
+`plt.imshow(image_array)`
+
+to prepare the image for display.
+
+I made a mistake by writing:
+
+`plt.show(image_array)`
+
+I learnt that this is incorrect.
+
+The correct pattern is:
+
+`plt.imshow(image_array)`
+
+followed by:
+
+`plt.show()`
+
+I now understand the roles clearly:
+
+**`imshow(image)` = this is the image I want to display.**
+
+**`show()` = display what I have prepared.**
+
+`plt.show()` does not need the image again.
+
+### Inspecting a Real Pixel
+
+I inspected:
+
+`image_array[0, 0]`
+
+and got:
+
+`[25, 31, 47]`
+
+This means that one real pixel contained:
+
+- Red = 25
+- Green = 31
+- Blue = 47
+
+This was different from the artificial colour examples where I manually used values like `[255, 0, 0]`.
+
+Now I could see how real images contain many different RGB combinations.
+
+### Normalising the Image
+
+I normalised the image by dividing the pixel values by:
+
+`255.0`
+
+This changed the scale from:
+
+`0 – 255`
+
+to approximately:
+
+`0 – 1`
+
+I learnt again that:
+
+**Normalisation changes the numerical scale used by the model, not the meaning of the image.**
+
+When I displayed the normalised image, it still looked like the same homework image.
+
+### Extracting RGB Channels
+
+I separated the real image into:
+
+- Red channel
+- Green channel
+- Blue channel
+
+The original image shape was:
+
+`(2000, 1500, 3)`
+
+Each individual channel had the shape:
+
+`(2000, 1500)`
+
+This made sense because once I selected only one colour channel, the final RGB dimension was removed.
+
+### Calculating Average Channel Strengths
+
+I calculated the mean of each channel.
+
+This helped me practise the same idea from the previous day on a real image rather than an artificial colour square.
+
+I understood that these averages describe the overall colour strength in the image.
+
+### Why This Matters in a Real Project
+
+Today helped me understand the preprocessing stage of a real computer-vision workflow.
+
+A future tutoring system could look like:
+
+Student homework image  
+→ load image  
+→ convert to RGB  
+→ convert to numerical tensor  
+→ inspect and preprocess  
+→ normalise  
+→ pass to computer-vision model  
+→ receive prediction or analysis
+
+Today I worked on the preparation part of that pipeline.
+
+### Important Mistakes and Corrections
+
+1. I initially used the wrong image extension when loading the file.
+
+2. I incorrectly wrote:
+
+`plt.show(image_array)`
+
+instead of:
+
+`plt.show()`
+
+I corrected both mistakes and now understand why they happened.
+
+### Main Memory Lines
+
+**Real image → load → RGB → NumPy array → inspect → normalise → model-ready data.**
+
+**Image shape = height × width × channels.**
+
+**RGB means Red, Green and Blue.**
+
+**`imshow(image)` receives the image.**
+
+**`show()` simply displays what was prepared.**
+
+**Normalisation changes the scale, not the image meaning.**
+
+### Reflection
+
+Today felt more realistic because I worked with an actual homework image rather than only artificial colour blocks.
+
+I could now see how the concepts from earlier days connect to a real computer-vision workflow.
+
+The biggest lesson was understanding that before a model can analyse an image, the image first has to be loaded, converted into numbers, inspected and prepared properly.
+
+### Evidence
+
+Completed:
+
+`week-13-day-05-tutoring-homework-image.ipynb`

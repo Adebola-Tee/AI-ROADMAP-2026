@@ -547,3 +547,292 @@ For example:
 
 ```python
 hidden_layer_sizes=(10,)
+# Week 13 — Computer Vision Basics
+
+**Dates:** September 30 – October 6, 2026
+
+## Objective
+
+Understand the foundations of computer vision, including:
+
+- images as numerical tensors
+- pixels
+- RGB channels
+- image dimensions and shapes
+- normalisation
+- image classification
+- basic preprocessing
+- transfer learning
+- pretrained models
+- fine-tuning
+
+---
+
+## What I Learned
+
+This week I learnt that a computer does not see an image the way a human does.
+
+An image is represented numerically using pixels and tensors.
+
+For an RGB image, a common shape is:
+
+`height × width × channels`
+
+For example:
+
+`(2000, 1500, 3)`
+
+means:
+
+- 2000 pixels high
+- 1500 pixels wide
+- 3 colour channels
+
+The three RGB channels are:
+
+- Channel 0 = Red
+- Channel 1 = Green
+- Channel 2 = Blue
+
+---
+
+## Image Tensors
+
+I practised creating images using NumPy arrays.
+
+I learnt how to inspect:
+
+- `.shape`
+- `.ndim`
+- `.dtype`
+
+I also learnt how to access individual pixels and individual colour channels.
+
+Example:
+
+`image[:, :, 0]`
+
+means:
+
+- all rows
+- all columns
+- red channel
+
+---
+
+## RGB Colours
+
+I practised combining RGB channel values.
+
+Examples:
+
+- Red = `[255, 0, 0]`
+- Green = `[0, 255, 0]`
+- Blue = `[0, 0, 255]`
+- Yellow = `[255, 255, 0]`
+- Cyan = `[0, 255, 255]`
+- White = `[255, 255, 255]`
+- Black = `[0, 0, 0]`
+
+This helped me understand that colour images are created from combinations of red, green and blue values.
+
+---
+
+## Normalisation
+
+I learnt how to normalise image pixel values.
+
+Original scale:
+
+`0 – 255`
+
+Normalised scale:
+
+`0 – 1`
+
+Example:
+
+`normalised_image = image / 255.0`
+
+Normalisation changes the numerical scale used by the model but does not change the meaning of the image.
+
+---
+
+## Image Batches
+
+I learnt that a batch is a group of images processed together.
+
+One RGB image may have a shape like:
+
+`(height, width, 3)`
+
+A batch can have:
+
+`(number_of_images, height, width, 3)`
+
+For example:
+
+`(2, 4, 4, 3)`
+
+means:
+
+- 2 images
+- 4 pixels high
+- 4 pixels wide
+- 3 RGB channels
+
+---
+
+## Basic Colour Classifier
+
+I built a simple rule-based colour classifier.
+
+The program:
+
+1. receives an RGB image
+2. calculates the average value of each RGB channel
+3. compares the averages
+4. returns the strongest colour
+
+The flow was:
+
+`Image tensor → RGB channels → channel averages → comparison → category`
+
+This was a **rule-based classifier**, not machine learning, because I manually created the decision rules.
+
+A machine-learning model would instead learn useful patterns from training examples.
+
+---
+
+## Real Tutoring Application
+
+I applied the week's concepts to a real tutoring use case.
+
+I loaded an actual image of student homework using PIL.
+
+The workflow was:
+
+`Student homework image → load image → convert to RGB → NumPy array → inspect → normalise → model-ready data`
+
+I learnt that a future computer-vision tutoring system could eventually use a workflow such as:
+
+`Student uploads homework → image preprocessing → computer-vision model → prediction or analysis → tutor reviews result`
+
+This helped connect the week's exercises to a realistic application.
+
+---
+
+## Transfer Learning
+
+I learnt that transfer learning means reusing knowledge from a model that has already been trained.
+
+Instead of training a large computer-vision model completely from scratch, I can eventually use a pretrained model and adapt it to my own task.
+
+### Pretrained Model
+
+A pretrained model is a model that has already learnt useful patterns from another large dataset.
+
+### Fine-Tuning
+
+Fine-tuning means adjusting some of the pretrained model's parameters further for my specific task.
+
+---
+
+## Important Mistakes and Corrections
+
+This week I made several useful mistakes.
+
+### 1. RGB Channel Confusion
+
+I had to reinforce:
+
+- 0 = Red
+- 1 = Green
+- 2 = Blue
+
+### 2. Analysing Different Images
+
+When calculating RGB averages, I initially took red from the red image, green from the green image, and blue from the blue image.
+
+I corrected this.
+
+The correct idea is:
+
+**One image → inspect all three of its channels.**
+
+### 3. Matplotlib `show()`
+
+I initially wrote:
+
+`plt.show(image)`
+
+I learnt that the correct pattern is:
+
+```python
+plt.imshow(image)
+plt.show()
+```
+
+`imshow()` receives the image.
+
+`show()` simply displays what has already been prepared.
+
+### 4. File Extension
+
+I initially used the wrong extension when loading my real image.
+
+I learnt that Python needs the exact file name and extension.
+
+---
+
+## Main Memory Lines
+
+**A computer sees an image as numbers.**
+
+**Image tensor = numerical representation of an image.**
+
+**RGB image = height × width × 3 channels.**
+
+**Channel 0 = Red.**
+
+**Channel 1 = Green.**
+
+**Channel 2 = Blue.**
+
+**Normalisation changes the numerical scale, not the meaning of the image.**
+
+**A batch is a collection of images processed together.**
+
+**Rule-based system = I write the rules.**
+
+**Machine learning = the model learns useful rules from data.**
+
+**Real image → preprocessing → tensor → model.**
+
+---
+
+## Week 13 Notebooks
+
+- `week-13-day-01-computer-vision-basics.ipynb`
+- `week-13-day-02-image-tensors-code-along.ipynb`
+- `week-13-day-03-computer-vision-practice.ipynb`
+- `week-13-day-04-basic-colour-classifier.ipynb`
+- `week-13-day-05-tutoring-homework-image.ipynb`
+
+---
+
+## Reflection
+
+Week 13 introduced me to computer vision in a gradual way.
+
+At first, concepts such as image tensors, RGB channels and image dimensions felt abstract.
+
+By the end of the week, I had moved from manually creating numerical images to loading and preprocessing a real homework photograph.
+
+I now understand that computer vision starts with representing visual information numerically before a model can learn from it.
+
+The most important connection I made this week was:
+
+**Image → numbers → preparation → model → prediction.**
+
+Week 13 complete.
